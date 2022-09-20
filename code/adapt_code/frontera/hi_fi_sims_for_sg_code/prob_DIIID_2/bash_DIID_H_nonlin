@@ -1,0 +1,29 @@
+#!/bin/bash
+## Submit via: sbatch submit.cmd (parameters below can be overwritten by command line options)
+#SBATCH -J GENE                # job name
+#SBATCH --time=16:00:00        # walltime
+#SBATCH --nodes=16              # Total number of nodes
+#SBATCH --ntasks-per-node=56   # MPI tasks (adjust MEM if lowered)
+#SBATCH --cpus-per-task=1      # Number of threads per task (OpenMP)
+#SBATCH -e test.err            # std-error file
+#SBATCH -o test.out            # std-output file
+#SBATCH -p normal
+#SBATCH -A PHY20008
+#SBATCH --mail-type=END
+#SBATCH --mail-user=ionut.farcas10@yahoo.com
+
+#set environment
+export OMP_NUM_THREADS=1
+export I_MPI_EXTRA_FILESYSTEM=0
+export HDF5_USE_FILE_LOCKING=FALSE
+
+
+#set environment
+module load fftw3
+module load python2
+
+module list
+
+export OMP_NUM_THREADS=1
+
+ibrun  ./gene_frontera

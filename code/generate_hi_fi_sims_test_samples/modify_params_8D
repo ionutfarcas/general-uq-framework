@@ -1,0 +1,88 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings qw(all);
+
+if ($#ARGV <= 1 ) 
+{
+	print "Error!\nUsage: ./modify_params 8 params\n";
+	exit;
+}
+
+my $file = $ARGV[0];
+
+my $outdir  = $ARGV[1];
+
+my $tau     = $ARGV[2];
+my $zeff    = $ARGV[3];
+my $q0      = $ARGV[4];
+my $shat    = $ARGV[5];
+
+my $omn     = $ARGV[6];
+my $omt     = $ARGV[7];
+
+my $Tref   = $ARGV[8];
+my $nref   = $ARGV[9];
+
+
+
+my $outdir_line  = 26;
+
+my $tau_line     = 61;
+my $zeff_line    = 62;
+
+my $q0_line     = 73;
+my $shat_line   = 74;
+
+my $omn_line   = 97;
+my $omt_line   = 98;
+
+my $Tref_line   = 109;
+my $nref_line   = 110;
+ 
+@ARGV = ($file);
+$^I = "";
+
+while (<>)
+{   
+    if ($. == $outdir_line) 
+    {
+        print "diagdir = $outdir \n";
+    }
+    elsif ($. == $tau_line)
+    {
+        print "tau = $tau \n"
+    }
+    elsif ($. == $zeff_line)
+    {
+        print "Zeff = $zeff \n"
+    }
+    elsif ($. == $q0_line)
+    {
+        print "q0 = $q0 \n"
+    }
+    elsif ($. == $shat_line)
+    {
+        print "shat = $shat \n"
+    }
+    elsif ($. == $omn_line)
+    {
+        print "omn = $omn \n"
+    }
+    elsif ($. == $omt_line)
+    {
+        print "omt = $omt \n"
+    }
+    elsif ($. == $Tref_line)
+    {
+        print "Tref = $Tref \n"
+    }
+    elsif ($. == $nref_line)
+    {
+        print "nref = $nref \n"
+    }
+    else
+    {   
+    	print;
+    }
+}

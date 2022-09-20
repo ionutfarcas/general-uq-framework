@@ -1,0 +1,13 @@
+
+Lmod is automatically replacing "python3/3.7.0" with "python2/2.7.16".
+
+
+Currently Loaded Modules:
+  1) intel/19.1.1   4) autotools/1.2   7) hwloc/1.11.12  10) fftw3/3.3.8
+  2) impi/19.0.9    5) cmake/3.20.3    8) xalt/2.10.13   11) python2/2.7.16
+  3) git/2.24.1     6) pmix/3.1.4      9) TACC
+
+ 
+
+slurmstepd: error: *** JOB 3218288 ON c202-003 CANCELLED AT 2021-07-02T16:19:21 DUE TO TIME LIMIT ***
+[proxy:0:0@c202-003.frontera.tacc.utexas.edu] wait_proxies_to_terminate (../../../../../src/pm/i_hydra/proxy/intel/i_proxy.c:124): downstream from host c202-004 exited with status 255

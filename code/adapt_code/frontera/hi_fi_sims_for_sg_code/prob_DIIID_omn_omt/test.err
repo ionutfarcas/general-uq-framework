@@ -1,0 +1,12 @@
+
+Lmod is automatically replacing "python3/3.7.0" with "python2/2.7.16".
+
+
+Currently Loaded Modules:
+  1) intel/19.1.1   4) autotools/1.2   7) hwloc/1.11.12  10) fftw3/3.3.8
+  2) impi/19.0.9    5) cmake/3.20.3    8) xalt/2.10.13   11) python2/2.7.16
+  3) git/2.24.1     6) pmix/3.1.4      9) TACC
+
+ 
+
+slurmstepd: error: *** JOB 3180428 ON c202-002 CANCELLED AT 2021-06-28T18:04:24 DUE TO TIME LIMIT ***

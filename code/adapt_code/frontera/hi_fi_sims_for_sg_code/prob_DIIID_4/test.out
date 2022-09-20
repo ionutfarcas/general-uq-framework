@@ -1,0 +1,2184 @@
+TACC:  Starting up job 3218288 
+TACC:  Starting parallel tasks... 
+ MPI_THREAD_SINGLE initialized.
+ 
+*****************************************************
+***** This is GENE 11 (release 2.1 - alpha 0) *******
+***** GIT branch hash: 460ebaf                *******
+***** GIT master hash: 26ff573                *******
+*****************************************************
+ 
+Memory page size on this system is       4096 bytes.
+We have  56 MPI processes per node.
+We have    1792 MPI tasks.
+Could not read the instantiations namelist in parameters. -- Use the defaults.
+WARNING: no dpdx_term treatment defined!!
+         Setting dpdx_term = 'full_drift' ... 
+Signs for magnetic field (1=clockwise, -1=counter-clockwise): B_t:  1, I_p:  1
+with collisions
+Using 1D fftw3 transforms
+
+Using the optimizer: optimizer_t                             
+
+Using a maximum of     3400.00 MB per core.
+ 
+------------------------------
+Starting optimization routine (this may take a while) 
+Testing parallelization (svwxyz):    1   4   8   1   1  56
+Using profile and geometry input to compute rhostar. Result:  2.44103E-03 = 1 / 409.662
+
+Constructing rhs for perf_vec = 111211111
+dgdxy_term is of type dgdxy_ff1_t                             
+dfielddxy_term is of type dchidxy_ff1_t                           
+dzv_term is of type dzv_1_r_t                               
+dchidz_term is of type dchidz_ff_t                             
+dfdxy_term is of type dfdxy_ff_t                              
+nonlinear_term is of type ff_nonlinear_term_t                     
+collisions_o is of type collisions_landau_t                     
+collisions_o%testpart_computer is of type testpart_computer_landau_2_t            
+collisions_o%fieldpart_computer is of type fieldpart_computer_landau_2_t           
+Ions are adiabatic
+Type of field_solver is fieldsolver_ff_t                        
+Type of fields_general is emfields_t                              
+Type of dfb_f is dist_func_block_t                       
+Type of dfb_h is dist_func_block_t                       
+CPU memory usage of             rhs construct is      0.3711MB, rss=            128.5781MB
+
+END constructing rhs for perf_vec = 111211111
+N for parallel boundary condition: 400
+computed coll    =    1.5765E-02  from profile
+computed debye2  =    2.3955E-04  from profile
+single precision computation
+parallel direction: 4th order Arakawa scheme
+=========== hyper diffusion ============
+prefactor for z-hyperdiffusion is scaled with dz
+hyp_z =     -5.000
+no explicit parallel velocity damping
+ 
+recurrence times for the different species:
+electrons    :    0.37886
+
+-------------------------------------------------------
+---- Initializing CalFullRhs                       ----
+-------------------------------------------------------
+
+nonlinear type is ff_nonlinear_term_t                      with a blocksize of        3
+hypv is of type hypv_h_ijl_t                            
+CPU memory usage of     initialize_CalFullRhs is     46.2812MB, rss=            175.3359MB
+Ions are adiabatic
+nonlinear computation
+4th order Runge-Kutta
+CPU memory usage of       finalize_CalFullRhs is    -39.6484MB, rss=            149.6523MB
+CPU memory usage of             optimize_perf is     20.3398MB, rss=            143.7617MB
+Testing parallelization (svwxyz):    1   8   8   1   1  28
+Using radial coordinate with dx/dr =   1.0000E+00
+Setting C_xy =   1.0000E+00 C_y =   2.1091E-01 C_x' =   4.7415E+00
+B_unit/Bref conversion factor =   2.8056E+00
+dPsi/dr =   2.1091E-01
+ffprime =   1.0974E+00
+n0 for parallel boundary condition:   1744
+info: dpdx_pm from geometry:     1.031567
+
+Constructing rhs for perf_vec = 111211111
+dgdxy_term is of type dgdxy_ff1_t                             
+dfielddxy_term is of type dchidxy_ff1_t                           
+dzv_term is of type dzv_1_r_t                               
+dchidz_term is of type dchidz_ff_t                             
+dfdxy_term is of type dfdxy_ff_t                              
+nonlinear_term is of type ff_nonlinear_term_t                     
+collisions_o is of type collisions_landau_t                     
+collisions_o%testpart_computer is of type testpart_computer_landau_2_t            
+collisions_o%fieldpart_computer is of type fieldpart_computer_landau_2_t           
+Ions are adiabatic
+Type of field_solver is fieldsolver_ff_t                        
+Type of fields_general is emfields_t                              
+Type of dfb_f is dist_func_block_t                       
+Type of dfb_h is dist_func_block_t                       
+CPU memory usage of             rhs construct is      0.0078MB, rss=            144.8086MB
+
+END constructing rhs for perf_vec = 111211111
+N for parallel boundary condition: 400
+single precision computation
+parallel direction: 4th order Arakawa scheme
+=========== hyper diffusion ============
+prefactor for z-hyperdiffusion is scaled with dz
+hyp_z =     -5.000
+no explicit parallel velocity damping
+ 
+recurrence times for the different species:
+electrons    :    0.37886
+
+-------------------------------------------------------
+---- Initializing CalFullRhs                       ----
+-------------------------------------------------------
+
+nonlinear type is ff_nonlinear_term_t                      with a blocksize of        2
+hypv is of type hypv_h_ijl_t                            
+CPU memory usage of     initialize_CalFullRhs is     36.9453MB, rss=            181.7539MB
+Ions are adiabatic
+nonlinear computation
+CPU memory usage of       finalize_CalFullRhs is      0.0000MB, rss=            204.8164MB
+CPU memory usage of             optimize_perf is     -2.3711MB, rss=            142.3594MB
+Testing parallelization (svwxyz):    1   8   4   1   1  56
+Using radial coordinate with dx/dr =   1.0000E+00
+Setting C_xy =   1.0000E+00 C_y =   2.1091E-01 C_x' =   4.7415E+00
+B_unit/Bref conversion factor =   2.8056E+00
+dPsi/dr =   2.1091E-01
+ffprime =   1.0974E+00
+n0 for parallel boundary condition:   1744
+info: dpdx_pm from geometry:     1.031567
+
+Constructing rhs for perf_vec = 111211111
+dgdxy_term is of type dgdxy_ff1_t                             
+dfielddxy_term is of type dchidxy_ff1_t                           
+dzv_term is of type dzv_1_r_t                               
+dchidz_term is of type dchidz_ff_t                             
+dfdxy_term is of type dfdxy_ff_t                              
+nonlinear_term is of type ff_nonlinear_term_t                     
+collisions_o is of type collisions_landau_t                     
+collisions_o%testpart_computer is of type testpart_computer_landau_2_t            
+collisions_o%fieldpart_computer is of type fieldpart_computer_landau_2_t           
+Ions are adiabatic
+Type of field_solver is fieldsolver_ff_t                        
+Type of fields_general is emfields_t                              
+Type of dfb_f is dist_func_block_t                       
+Type of dfb_h is dist_func_block_t                       
+CPU memory usage of             rhs construct is      0.0078MB, rss=            146.5625MB
+
+END constructing rhs for perf_vec = 111211111
+N for parallel boundary condition: 400
+single precision computation
+parallel direction: 4th order Arakawa scheme
+=========== hyper diffusion ============
+prefactor for z-hyperdiffusion is scaled with dz
+hyp_z =     -5.000
+no explicit parallel velocity damping
+ 
+recurrence times for the different species:
+electrons    :    0.37886
+
+-------------------------------------------------------
+---- Initializing CalFullRhs                       ----
+-------------------------------------------------------
+
+nonlinear type is ff_nonlinear_term_t                      with a blocksize of        3
+hypv is of type hypv_h_ijl_t                            
+CPU memory usage of     initialize_CalFullRhs is     38.4688MB, rss=            185.0391MB
+Ions are adiabatic
+nonlinear computation
+CPU memory usage of       finalize_CalFullRhs is      0.1797MB, rss=            202.9297MB
+CPU memory usage of             optimize_perf is      0.3320MB, rss=            143.3398MB
+Testing parallelization (svwxyz):    1  16   8   1   1  14
+Using radial coordinate with dx/dr =   1.0000E+00
+Setting C_xy =   1.0000E+00 C_y =   2.1091E-01 C_x' =   4.7415E+00
+B_unit/Bref conversion factor =   2.8056E+00
+dPsi/dr =   2.1091E-01
+ffprime =   1.0974E+00
+n0 for parallel boundary condition:   1744
+info: dpdx_pm from geometry:     1.031567
+
+Constructing rhs for perf_vec = 111211111
+dgdxy_term is of type dgdxy_ff1_t                             
+dfielddxy_term is of type dchidxy_ff1_t                           
+dzv_term is of type dzv_1_r_t                               
+dchidz_term is of type dchidz_ff_t                             
+dfdxy_term is of type dfdxy_ff_t                              
+nonlinear_term is of type ff_nonlinear_term_t                     
+collisions_o is of type collisions_landau_t                     
+collisions_o%testpart_computer is of type testpart_computer_landau_2_t            
+collisions_o%fieldpart_computer is of type fieldpart_computer_landau_2_t           
+Ions are adiabatic
+Type of field_solver is fieldsolver_ff_t                        
+Type of fields_general is emfields_t                              
+Type of dfb_f is dist_func_block_t                       
+Type of dfb_h is dist_func_block_t                       
+CPU memory usage of             rhs construct is      0.1836MB, rss=            147.4648MB
+
+END constructing rhs for perf_vec = 111211111
+N for parallel boundary condition: 400
+single precision computation
+parallel direction: 4th order Arakawa scheme
+=========== hyper diffusion ============
+prefactor for z-hyperdiffusion is scaled with dz
+hyp_z =     -5.000
+no explicit parallel velocity damping
+ 
+recurrence times for the different species:
+electrons    :    0.37886
+
+-------------------------------------------------------
+---- Initializing CalFullRhs                       ----
+-------------------------------------------------------
+
+nonlinear type is ff_nonlinear_term_t                      with a blocksize of        3
+hypv is of type hypv_h_ijl_t                            
+CPU memory usage of     initialize_CalFullRhs is     54.0977MB, rss=            201.5625MB
+Ions are adiabatic
+nonlinear computation
+CPU memory usage of       finalize_CalFullRhs is    -40.4805MB, rss=            192.4727MB
+CPU memory usage of             optimize_perf is      7.1289MB, rss=            150.8828MB
+Testing parallelization (svwxyz):    1  16   4   1   1  28
+Using radial coordinate with dx/dr =   1.0000E+00
+Setting C_xy =   1.0000E+00 C_y =   2.1091E-01 C_x' =   4.7415E+00
+B_unit/Bref conversion factor =   2.8056E+00
+dPsi/dr =   2.1091E-01
+ffprime =   1.0974E+00
+n0 for parallel boundary condition:   1744
+info: dpdx_pm from geometry:     1.031567
+
+Constructing rhs for perf_vec = 111211111
+dgdxy_term is of type dgdxy_ff1_t                             
+dfielddxy_term is of type dchidxy_ff1_t                           
+dzv_term is of type dzv_1_r_t                               
+dchidz_term is of type dchidz_ff_t                             
+dfdxy_term is of type dfdxy_ff_t                              
+nonlinear_term is of type ff_nonlinear_term_t                     
+collisions_o is of type collisions_landau_t                     
+collisions_o%testpart_computer is of type testpart_computer_landau_2_t            
+collisions_o%fieldpart_computer is of type fieldpart_computer_landau_2_t           
+Ions are adiabatic
+Type of field_solver is fieldsolver_ff_t                        
+Type of fields_general is emfields_t                              
+Type of dfb_f is dist_func_block_t                       
+Type of dfb_h is dist_func_block_t                       
+CPU memory usage of             rhs construct is      0.1836MB, rss=            154.8477MB
+
+END constructing rhs for perf_vec = 111211111
+N for parallel boundary condition: 400
+single precision computation
+parallel direction: 4th order Arakawa scheme
+=========== hyper diffusion ============
+prefactor for z-hyperdiffusion is scaled with dz
+hyp_z =     -5.000
+no explicit parallel velocity damping
+ 
+recurrence times for the different species:
+electrons    :    0.37886
+
+-------------------------------------------------------
+---- Initializing CalFullRhs                       ----
+-------------------------------------------------------
+
+nonlinear type is ff_nonlinear_term_t                      with a blocksize of        3
+hypv is of type hypv_h_ijl_t                            
+CPU memory usage of     initialize_CalFullRhs is     43.7227MB, rss=            198.5703MB
+Ions are adiabatic
+nonlinear computation
+CPU memory usage of       finalize_CalFullRhs is      0.0430MB, rss=            222.2383MB
+CPU memory usage of             optimize_perf is      2.7930MB, rss=            153.8633MB
+Testing parallelization (svwxyz):    1  16   2   1   1  56
+Using radial coordinate with dx/dr =   1.0000E+00
+Setting C_xy =   1.0000E+00 C_y =   2.1091E-01 C_x' =   4.7415E+00
+B_unit/Bref conversion factor =   2.8056E+00
+dPsi/dr =   2.1091E-01
+ffprime =   1.0974E+00
+n0 for parallel boundary condition:   1744
+info: dpdx_pm from geometry:     1.031567
+
+Constructing rhs for perf_vec = 111211111
+dgdxy_term is of type dgdxy_ff1_t                             
+dfielddxy_term is of type dchidxy_ff1_t                           
+dzv_term is of type dzv_1_r_t                               
+dchidz_term is of type dchidz_ff_t                             
+dfdxy_term is of type dfdxy_ff_t                              
+nonlinear_term is of type ff_nonlinear_term_t                     
+collisions_o is of type collisions_landau_t                     
+collisions_o%testpart_computer is of type testpart_computer_landau_2_t            
+collisions_o%fieldpart_computer is of type fieldpart_computer_landau_2_t           
+Ions are adiabatic
+Type of field_solver is fieldsolver_ff_t                        
+Type of fields_general is emfields_t                              
+Type of dfb_f is dist_func_block_t                       
+Type of dfb_h is dist_func_block_t                       
+CPU memory usage of             rhs construct is      0.1680MB, rss=            157.7930MB
+
+END constructing rhs for perf_vec = 111211111
+N for parallel boundary condition: 400
+single precision computation
+parallel direction: 4th order Arakawa scheme
+=========== hyper diffusion ============
+prefactor for z-hyperdiffusion is scaled with dz
+hyp_z =     -5.000
+no explicit parallel velocity damping
+ 
+recurrence times for the different species:
+electrons    :    0.37886
+
+-------------------------------------------------------
+---- Initializing CalFullRhs                       ----
+-------------------------------------------------------
+
+nonlinear type is ff_nonlinear_term_t                      with a blocksize of        3
+hypv is of type hypv_h_ijl_t                            
+CPU memory usage of     initialize_CalFullRhs is     45.6875MB, rss=            203.4805MB
+Ions are adiabatic
+nonlinear computation
+CPU memory usage of       finalize_CalFullRhs is      0.1797MB, rss=            225.9531MB
+CPU memory usage of             optimize_perf is      0.4414MB, rss=            154.5508MB
+Testing parallelization (svwxyz):    1   2   8   1   2  56
+Using radial coordinate with dx/dr =   1.0000E+00
+Setting C_xy =   1.0000E+00 C_y =   2.1091E-01 C_x' =   4.7415E+00
+B_unit/Bref conversion factor =   2.8056E+00
+dPsi/dr =   2.1091E-01
+ffprime =   1.0974E+00
+n0 for parallel boundary condition:   1744
+info: dpdx_pm from geometry:     1.031567
+
+Constructing rhs for perf_vec = 111211111
+dgdxy_term is of type dgdxy_ff1_t                             
+dfielddxy_term is of type dchidxy_ff1_t                           
+dzv_term is of type dzv_1_r_t                               
+dchidz_term is of type dchidz_ff_t                             
+dfdxy_term is of type dfdxy_ff_t                              
+nonlinear_term is of type ff_nonlinear_term_t                     
+collisions_o is of type collisions_landau_t                     
+collisions_o%testpart_computer is of type testpart_computer_landau_2_t            
+collisions_o%fieldpart_computer is of type fieldpart_computer_landau_2_t           
+Ions are adiabatic
+Type of field_solver is fieldsolver_ff_t                        
+Type of fields_general is emfields_t                              
+Type of dfb_f is dist_func_block_t                       
+Type of dfb_h is dist_func_block_t                       
+CPU memory usage of             rhs construct is      0.0430MB, rss=            158.3203MB
+
+END constructing rhs for perf_vec = 111211111
+N for parallel boundary condition: 400
+single precision computation
+parallel direction: 4th order Arakawa scheme
+=========== hyper diffusion ============
+prefactor for z-hyperdiffusion is scaled with dz
+hyp_z =     -5.000
+no explicit parallel velocity damping
+ 
+recurrence times for the different species:
+electrons    :    0.37886
+
+-------------------------------------------------------
+---- Initializing CalFullRhs                       ----
+-------------------------------------------------------
+
+nonlinear type is ff_nonlinear_term_t                      with a blocksize of        6
+hypv is of type hypv_h_ijl_t                            
+CPU memory usage of     initialize_CalFullRhs is     32.3477MB, rss=            190.6680MB
+Ions are adiabatic
+nonlinear computation
+CPU memory usage of       finalize_CalFullRhs is      0.1758MB, rss=            204.4375MB
+CPU memory usage of             optimize_perf is      0.3125MB, rss=            155.2305MB
+Testing parallelization (svwxyz):    1   4   8   1   2  28
+Using radial coordinate with dx/dr =   1.0000E+00
+Setting C_xy =   1.0000E+00 C_y =   2.1091E-01 C_x' =   4.7415E+00
+B_unit/Bref conversion factor =   2.8056E+00
+dPsi/dr =   2.1091E-01
+ffprime =   1.0974E+00
+n0 for parallel boundary condition:   1744
+info: dpdx_pm from geometry:     1.031567
+
+Constructing rhs for perf_vec = 111211111
+dgdxy_term is of type dgdxy_ff1_t                             
+dfielddxy_term is of type dchidxy_ff1_t                           
+dzv_term is of type dzv_1_r_t                               
+dchidz_term is of type dchidz_ff_t                             
+dfdxy_term is of type dfdxy_ff_t                              
+nonlinear_term is of type ff_nonlinear_term_t                     
+collisions_o is of type collisions_landau_t                     
+collisions_o%testpart_computer is of type testpart_computer_landau_2_t            
+collisions_o%fieldpart_computer is of type fieldpart_computer_landau_2_t           
+Ions are adiabatic
+Type of field_solver is fieldsolver_ff_t                        
+Type of fields_general is emfields_t                              
+Type of dfb_f is dist_func_block_t                       
+Type of dfb_h is dist_func_block_t                       
+CPU memory usage of             rhs construct is      0.0430MB, rss=            158.8594MB
+
+END constructing rhs for perf_vec = 111211111
+N for parallel boundary condition: 400
+single precision computation
+parallel direction: 4th order Arakawa scheme
+=========== hyper diffusion ============
+prefactor for z-hyperdiffusion is scaled with dz
+hyp_z =     -5.000
+no explicit parallel velocity damping
+ 
+recurrence times for the different species:
+electrons    :    0.37886
+
+-------------------------------------------------------
+---- Initializing CalFullRhs                       ----
+-------------------------------------------------------
+
+nonlinear type is ff_nonlinear_term_t                      with a blocksize of        3
+hypv is of type hypv_h_ijl_t                            
+CPU memory usage of     initialize_CalFullRhs is     28.1953MB, rss=            187.0547MB
+Ions are adiabatic
+nonlinear computation
+CPU memory usage of       finalize_CalFullRhs is      0.1172MB, rss=            200.8516MB
+CPU memory usage of             optimize_perf is      0.8359MB, rss=            156.2461MB
+Testing parallelization (svwxyz):    1   4   4   1   2  56
+Using radial coordinate with dx/dr =   1.0000E+00
+Setting C_xy =   1.0000E+00 C_y =   2.1091E-01 C_x' =   4.7415E+00
+B_unit/Bref conversion factor =   2.8056E+00
+dPsi/dr =   2.1091E-01
+ffprime =   1.0974E+00
+n0 for parallel boundary condition:   1744
+info: dpdx_pm from geometry:     1.031567
+
+Constructing rhs for perf_vec = 111211111
+dgdxy_term is of type dgdxy_ff1_t                             
+dfielddxy_term is of type dchidxy_ff1_t                           
+dzv_term is of type dzv_1_r_t                               
+dchidz_term is of type dchidz_ff_t                             
+dfdxy_term is of type dfdxy_ff_t                              
+nonlinear_term is of type ff_nonlinear_term_t                     
+collisions_o is of type collisions_landau_t                     
+collisions_o%testpart_computer is of type testpart_computer_landau_2_t            
+collisions_o%fieldpart_computer is of type fieldpart_computer_landau_2_t           
+Ions are adiabatic
+Type of field_solver is fieldsolver_ff_t                        
+Type of fields_general is emfields_t                              
+Type of dfb_f is dist_func_block_t                       
+Type of dfb_h is dist_func_block_t                       
+CPU memory usage of             rhs construct is      0.0430MB, rss=            159.8320MB
+
+END constructing rhs for perf_vec = 111211111
+N for parallel boundary condition: 400
+single precision computation
+parallel direction: 4th order Arakawa scheme
+=========== hyper diffusion ============
+prefactor for z-hyperdiffusion is scaled with dz
+hyp_z =     -5.000
+no explicit parallel velocity damping
+ 
+recurrence times for the different species:
+electrons    :    0.37886
+
+-------------------------------------------------------
+---- Initializing CalFullRhs                       ----
+-------------------------------------------------------
+
+nonlinear type is ff_nonlinear_term_t                      with a blocksize of        6
+hypv is of type hypv_h_ijl_t                            
+CPU memory usage of     initialize_CalFullRhs is     26.6680MB, rss=            186.5000MB
+Ions are adiabatic
+nonlinear computation
+CPU memory usage of       finalize_CalFullRhs is      0.0000MB, rss=            200.7109MB
+CPU memory usage of             optimize_perf is      0.2422MB, rss=            156.6641MB
+Testing parallelization (svwxyz):    1   8   8   1   2  14
+Using radial coordinate with dx/dr =   1.0000E+00
+Setting C_xy =   1.0000E+00 C_y =   2.1091E-01 C_x' =   4.7415E+00
+B_unit/Bref conversion factor =   2.8056E+00
+dPsi/dr =   2.1091E-01
+ffprime =   1.0974E+00
+n0 for parallel boundary condition:   1744
+info: dpdx_pm from geometry:     1.031567
+
+Constructing rhs for perf_vec = 111211111
+dgdxy_term is of type dgdxy_ff1_t                             
+dfielddxy_term is of type dchidxy_ff1_t                           
+dzv_term is of type dzv_1_r_t                               
+dchidz_term is of type dchidz_ff_t                             
+dfdxy_term is of type dfdxy_ff_t                              
+nonlinear_term is of type ff_nonlinear_term_t                     
+collisions_o is of type collisions_landau_t                     
+collisions_o%testpart_computer is of type testpart_computer_landau_2_t            
+collisions_o%fieldpart_computer is of type fieldpart_computer_landau_2_t           
+Ions are adiabatic
+Type of field_solver is fieldsolver_ff_t                        
+Type of fields_general is emfields_t                              
+Type of dfb_f is dist_func_block_t                       
+Type of dfb_h is dist_func_block_t                       
+CPU memory usage of             rhs construct is      0.1680MB, rss=            160.4023MB
+
+END constructing rhs for perf_vec = 111211111
+N for parallel boundary condition: 400
+single precision computation
+parallel direction: 4th order Arakawa scheme
+=========== hyper diffusion ============
+prefactor for z-hyperdiffusion is scaled with dz
+hyp_z =     -5.000
+no explicit parallel velocity damping
+ 
+recurrence times for the different species:
+electrons    :    0.37886
+
+-------------------------------------------------------
+---- Initializing CalFullRhs                       ----
+-------------------------------------------------------
+
+nonlinear type is ff_nonlinear_term_t                      with a blocksize of        4
+hypv is of type hypv_h_ijl_t                            
+CPU memory usage of     initialize_CalFullRhs is     33.4141MB, rss=            193.8164MB
+Ions are adiabatic
+nonlinear computation
+CPU memory usage of       finalize_CalFullRhs is      0.1328MB, rss=            211.6641MB
+CPU memory usage of             optimize_perf is      2.8320MB, rss=            159.6680MB
+Testing parallelization (svwxyz):    1   8   4   1   2  28
+Using radial coordinate with dx/dr =   1.0000E+00
+Setting C_xy =   1.0000E+00 C_y =   2.1091E-01 C_x' =   4.7415E+00
+B_unit/Bref conversion factor =   2.8056E+00
+dPsi/dr =   2.1091E-01
+ffprime =   1.0974E+00
+n0 for parallel boundary condition:   1744
+info: dpdx_pm from geometry:     1.031567
+
+Constructing rhs for perf_vec = 111211111
+dgdxy_term is of type dgdxy_ff1_t                             
+dfielddxy_term is of type dchidxy_ff1_t                           
+dzv_term is of type dzv_1_r_t                               
+dchidz_term is of type dchidz_ff_t                             
+dfdxy_term is of type dfdxy_ff_t                              
+nonlinear_term is of type ff_nonlinear_term_t                     
+collisions_o is of type collisions_landau_t                     
+collisions_o%testpart_computer is of type testpart_computer_landau_2_t            
+collisions_o%fieldpart_computer is of type fieldpart_computer_landau_2_t           
+Ions are adiabatic
+Type of field_solver is fieldsolver_ff_t                        
+Type of fields_general is emfields_t                              
+Type of dfb_f is dist_func_block_t                       
+Type of dfb_h is dist_func_block_t                       
+CPU memory usage of             rhs construct is      0.0430MB, rss=            163.2227MB
+
+END constructing rhs for perf_vec = 111211111
+N for parallel boundary condition: 400
+single precision computation
+parallel direction: 4th order Arakawa scheme
+=========== hyper diffusion ============
+prefactor for z-hyperdiffusion is scaled with dz
+hyp_z =     -5.000
+no explicit parallel velocity damping
+ 
+recurrence times for the different species:
+electrons    :    0.37886
+
+-------------------------------------------------------
+---- Initializing CalFullRhs                       ----
+-------------------------------------------------------
+
+nonlinear type is ff_nonlinear_term_t                      with a blocksize of        3
+hypv is of type hypv_h_ijl_t                            
+CPU memory usage of     initialize_CalFullRhs is     26.3711MB, rss=            189.5938MB
+Ions are adiabatic
+nonlinear computation
+CPU memory usage of       finalize_CalFullRhs is      0.1289MB, rss=            204.4219MB
+CPU memory usage of             optimize_perf is      0.4180MB, rss=            160.2344MB
+Testing parallelization (svwxyz):    1   8   2   1   2  56
+Using radial coordinate with dx/dr =   1.0000E+00
+Setting C_xy =   1.0000E+00 C_y =   2.1091E-01 C_x' =   4.7415E+00
+B_unit/Bref conversion factor =   2.8056E+00
+dPsi/dr =   2.1091E-01
+ffprime =   1.0974E+00
+n0 for parallel boundary condition:   1744
+info: dpdx_pm from geometry:     1.031567
+
+Constructing rhs for perf_vec = 111211111
+dgdxy_term is of type dgdxy_ff1_t                             
+dfielddxy_term is of type dchidxy_ff1_t                           
+dzv_term is of type dzv_1_r_t                               
+dchidz_term is of type dchidz_ff_t                             
+dfdxy_term is of type dfdxy_ff_t                              
+nonlinear_term is of type ff_nonlinear_term_t                     
+collisions_o is of type collisions_landau_t                     
+collisions_o%testpart_computer is of type testpart_computer_landau_2_t            
+collisions_o%fieldpart_computer is of type fieldpart_computer_landau_2_t           
+Ions are adiabatic
+Type of field_solver is fieldsolver_ff_t                        
+Type of fields_general is emfields_t                              
+Type of dfb_f is dist_func_block_t                       
+Type of dfb_h is dist_func_block_t                       
+CPU memory usage of             rhs construct is      0.0430MB, rss=            163.8008MB
+
+END constructing rhs for perf_vec = 111211111
+N for parallel boundary condition: 400
+single precision computation
+parallel direction: 4th order Arakawa scheme
+=========== hyper diffusion ============
+prefactor for z-hyperdiffusion is scaled with dz
+hyp_z =     -5.000
+no explicit parallel velocity damping
+ 
+recurrence times for the different species:
+electrons    :    0.37886
+
+-------------------------------------------------------
+---- Initializing CalFullRhs                       ----
+-------------------------------------------------------
+
+nonlinear type is ff_nonlinear_term_t                      with a blocksize of        6
+hypv is of type hypv_h_ijl_t                            
+CPU memory usage of     initialize_CalFullRhs is     28.1914MB, rss=            191.9922MB
+Ions are adiabatic
+nonlinear computation
+CPU memory usage of       finalize_CalFullRhs is      0.2461MB, rss=            208.1016MB
+CPU memory usage of             optimize_perf is      0.1953MB, rss=            160.5703MB
+Testing parallelization (svwxyz):    1  16   8   1   2   7
+Using radial coordinate with dx/dr =   1.0000E+00
+Setting C_xy =   1.0000E+00 C_y =   2.1091E-01 C_x' =   4.7415E+00
+B_unit/Bref conversion factor =   2.8056E+00
+dPsi/dr =   2.1091E-01
+ffprime =   1.0974E+00
+n0 for parallel boundary condition:   1744
+info: dpdx_pm from geometry:     1.031567
+
+Constructing rhs for perf_vec = 111211111
+dgdxy_term is of type dgdxy_ff1_t                             
+dfielddxy_term is of type dchidxy_ff1_t                           
+dzv_term is of type dzv_1_r_t                               
+dchidz_term is of type dchidz_ff_t                             
+dfdxy_term is of type dfdxy_ff_t                              
+nonlinear_term is of type ff_nonlinear_term_t                     
+collisions_o is of type collisions_landau_t                     
+collisions_o%testpart_computer is of type testpart_computer_landau_2_t            
+collisions_o%fieldpart_computer is of type fieldpart_computer_landau_2_t           
+Ions are adiabatic
+Type of field_solver is fieldsolver_ff_t                        
+Type of fields_general is emfields_t                              
+Type of dfb_f is dist_func_block_t                       
+Type of dfb_h is dist_func_block_t                       
+CPU memory usage of             rhs construct is      0.0469MB, rss=            164.2656MB
+
+END constructing rhs for perf_vec = 111211111
+N for parallel boundary condition: 400
+single precision computation
+parallel direction: 4th order Arakawa scheme
+=========== hyper diffusion ============
+prefactor for z-hyperdiffusion is scaled with dz
+hyp_z =     -5.000
+no explicit parallel velocity damping
+ 
+recurrence times for the different species:
+electrons    :    0.37886
+
+-------------------------------------------------------
+---- Initializing CalFullRhs                       ----
+-------------------------------------------------------
+
+nonlinear type is ff_nonlinear_term_t                      with a blocksize of        4
+hypv is of type hypv_h_ijl_t                            
+CPU memory usage of     initialize_CalFullRhs is     47.0547MB, rss=            211.3203MB
+Ions are adiabatic
+nonlinear computation
+CPU memory usage of       finalize_CalFullRhs is      0.2578MB, rss=            237.0312MB
+CPU memory usage of             optimize_perf is      2.5586MB, rss=            163.3125MB
+Testing parallelization (svwxyz):    1  16   4   1   2  14
+Using radial coordinate with dx/dr =   1.0000E+00
+Setting C_xy =   1.0000E+00 C_y =   2.1091E-01 C_x' =   4.7415E+00
+B_unit/Bref conversion factor =   2.8056E+00
+dPsi/dr =   2.1091E-01
+ffprime =   1.0974E+00
+n0 for parallel boundary condition:   1744
+info: dpdx_pm from geometry:     1.031567
+
+Constructing rhs for perf_vec = 111211111
+dgdxy_term is of type dgdxy_ff1_t                             
+dfielddxy_term is of type dchidxy_ff1_t                           
+dzv_term is of type dzv_1_r_t                               
+dchidz_term is of type dchidz_ff_t                             
+dfdxy_term is of type dfdxy_ff_t                              
+nonlinear_term is of type ff_nonlinear_term_t                     
+collisions_o is of type collisions_landau_t                     
+collisions_o%testpart_computer is of type testpart_computer_landau_2_t            
+collisions_o%fieldpart_computer is of type fieldpart_computer_landau_2_t           
+Ions are adiabatic
+Type of field_solver is fieldsolver_ff_t                        
+Type of fields_general is emfields_t                              
+Type of dfb_f is dist_func_block_t                       
+Type of dfb_h is dist_func_block_t                       
+CPU memory usage of             rhs construct is      0.0430MB, rss=            166.8281MB
+
+END constructing rhs for perf_vec = 111211111
+N for parallel boundary condition: 400
+single precision computation
+parallel direction: 4th order Arakawa scheme
+=========== hyper diffusion ============
+prefactor for z-hyperdiffusion is scaled with dz
+hyp_z =     -5.000
+no explicit parallel velocity damping
+ 
+recurrence times for the different species:
+electrons    :    0.37886
+
+-------------------------------------------------------
+---- Initializing CalFullRhs                       ----
+-------------------------------------------------------
+
+nonlinear type is ff_nonlinear_term_t                      with a blocksize of        4
+hypv is of type hypv_h_ijl_t                            
+CPU memory usage of     initialize_CalFullRhs is     35.4844MB, rss=            202.3125MB
+Ions are adiabatic
+nonlinear computation
+CPU memory usage of       finalize_CalFullRhs is      0.0742MB, rss=            224.5586MB
+CPU memory usage of             optimize_perf is      4.8242MB, rss=            168.1367MB
+Testing parallelization (svwxyz):    1  16   2   1   2  28
+Using radial coordinate with dx/dr =   1.0000E+00
+Setting C_xy =   1.0000E+00 C_y =   2.1091E-01 C_x' =   4.7415E+00
+B_unit/Bref conversion factor =   2.8056E+00
+dPsi/dr =   2.1091E-01
+ffprime =   1.0974E+00
+n0 for parallel boundary condition:   1744
+info: dpdx_pm from geometry:     1.031567
+
+Constructing rhs for perf_vec = 111211111
+dgdxy_term is of type dgdxy_ff1_t                             
+dfielddxy_term is of type dchidxy_ff1_t                           
+dzv_term is of type dzv_1_r_t                               
+dchidz_term is of type dchidz_ff_t                             
+dfdxy_term is of type dfdxy_ff_t                              
+nonlinear_term is of type ff_nonlinear_term_t                     
+collisions_o is of type collisions_landau_t                     
+collisions_o%testpart_computer is of type testpart_computer_landau_2_t            
+collisions_o%fieldpart_computer is of type fieldpart_computer_landau_2_t           
+Ions are adiabatic
+Type of field_solver is fieldsolver_ff_t                        
+Type of fields_general is emfields_t                              
+Type of dfb_f is dist_func_block_t                       
+Type of dfb_h is dist_func_block_t                       
+CPU memory usage of             rhs construct is      0.0430MB, rss=            171.6562MB
+
+END constructing rhs for perf_vec = 111211111
+N for parallel boundary condition: 400
+single precision computation
+parallel direction: 4th order Arakawa scheme
+=========== hyper diffusion ============
+prefactor for z-hyperdiffusion is scaled with dz
+hyp_z =     -5.000
+no explicit parallel velocity damping
+ 
+recurrence times for the different species:
+electrons    :    0.37886
+
+-------------------------------------------------------
+---- Initializing CalFullRhs                       ----
+-------------------------------------------------------
+
+nonlinear type is ff_nonlinear_term_t                      with a blocksize of        3
+hypv is of type hypv_h_ijl_t                            
+CPU memory usage of     initialize_CalFullRhs is     31.7383MB, rss=            203.3945MB
+Ions are adiabatic
+nonlinear computation
+CPU memory usage of       finalize_CalFullRhs is      0.1289MB, rss=            221.4961MB
+CPU memory usage of             optimize_perf is      0.5312MB, rss=            168.6680MB
+Testing parallelization (svwxyz):    1  16   1   1   2  56
+Using radial coordinate with dx/dr =   1.0000E+00
+Setting C_xy =   1.0000E+00 C_y =   2.1091E-01 C_x' =   4.7415E+00
+B_unit/Bref conversion factor =   2.8056E+00
+dPsi/dr =   2.1091E-01
+ffprime =   1.0974E+00
+n0 for parallel boundary condition:   1744
+info: dpdx_pm from geometry:     1.031567
+
+Constructing rhs for perf_vec = 111211111
+dgdxy_term is of type dgdxy_ff1_t                             
+dfielddxy_term is of type dchidxy_ff1_t                           
+dzv_term is of type dzv_1_r_t                               
+dchidz_term is of type dchidz_ff_t                             
+dfdxy_term is of type dfdxy_ff_t                              
+nonlinear_term is of type ff_nonlinear_term_t                     
+collisions_o is of type collisions_landau_t                     
+collisions_o%testpart_computer is of type testpart_computer_landau_2_t            
+collisions_o%fieldpart_computer is of type fieldpart_computer_landau_2_t           
+Ions are adiabatic
+Type of field_solver is fieldsolver_ff_t                        
+Type of fields_general is emfields_t                              
+Type of dfb_f is dist_func_block_t                       
+Type of dfb_h is dist_func_block_t                       
+CPU memory usage of             rhs construct is      0.0430MB, rss=            172.1484MB
+
+END constructing rhs for perf_vec = 111211111
+N for parallel boundary condition: 400
+single precision computation
+parallel direction: 4th order Arakawa scheme
+=========== hyper diffusion ============
+prefactor for z-hyperdiffusion is scaled with dz
+hyp_z =     -5.000
+no explicit parallel velocity damping
+ 
+recurrence times for the different species:
+electrons    :    0.37886
+
+-------------------------------------------------------
+---- Initializing CalFullRhs                       ----
+-------------------------------------------------------
+
+nonlinear type is ff_nonlinear_term_t                      with a blocksize of        6
+hypv is of type hypv_h_ijl_t                            
+CPU memory usage of     initialize_CalFullRhs is     31.9492MB, rss=            204.0977MB
+Ions are adiabatic
+nonlinear computation
+CPU memory usage of       finalize_CalFullRhs is      0.1953MB, rss=            224.8477MB
+CPU memory usage of             optimize_perf is      0.1914MB, rss=            168.8594MB
+Testing parallelization (svwxyz):    1   1   8   1   4  56
+Using radial coordinate with dx/dr =   1.0000E+00
+Setting C_xy =   1.0000E+00 C_y =   2.1091E-01 C_x' =   4.7415E+00
+B_unit/Bref conversion factor =   2.8056E+00
+dPsi/dr =   2.1091E-01
+ffprime =   1.0974E+00
+n0 for parallel boundary condition:   1744
+info: dpdx_pm from geometry:     1.031567
+
+Constructing rhs for perf_vec = 111211111
+dgdxy_term is of type dgdxy_ff1_t                             
+dfielddxy_term is of type dchidxy_ff1_t                           
+dzv_term is of type dzv_1_r_t                               
+dchidz_term is of type dchidz_ff_t                             
+dfdxy_term is of type dfdxy_ff_t                              
+nonlinear_term is of type ff_nonlinear_term_t                     
+collisions_o is of type collisions_landau_t                     
+collisions_o%testpart_computer is of type testpart_computer_landau_2_t            
+collisions_o%fieldpart_computer is of type fieldpart_computer_landau_2_t           
+Ions are adiabatic
+Type of field_solver is fieldsolver_ff_t                        
+Type of fields_general is emfields_t                              
+Type of dfb_f is dist_func_block_t                       
+Type of dfb_h is dist_func_block_t                       
+CPU memory usage of             rhs construct is      0.2305MB, rss=            172.3477MB
+
+END constructing rhs for perf_vec = 111211111
+N for parallel boundary condition: 400
+single precision computation
+parallel direction: 4th order Arakawa scheme
+=========== hyper diffusion ============
+prefactor for z-hyperdiffusion is scaled with dz
+hyp_z =     -5.000
+no explicit parallel velocity damping
+ 
+recurrence times for the different species:
+electrons    :    0.37886
+
+-------------------------------------------------------
+---- Initializing CalFullRhs                       ----
+-------------------------------------------------------
+
+nonlinear type is ff_nonlinear_term_t                      with a blocksize of        6
+hypv is of type hypv_h_ijl_t                            
+CPU memory usage of     initialize_CalFullRhs is     27.0039MB, rss=            199.3516MB
+Ions are adiabatic
+nonlinear computation
+CPU memory usage of       finalize_CalFullRhs is      0.1523MB, rss=            211.9180MB
+CPU memory usage of             optimize_perf is      0.7188MB, rss=            169.5781MB
+Testing parallelization (svwxyz):    1   2   8   1   4  28
+Using radial coordinate with dx/dr =   1.0000E+00
+Setting C_xy =   1.0000E+00 C_y =   2.1091E-01 C_x' =   4.7415E+00
+B_unit/Bref conversion factor =   2.8056E+00
+dPsi/dr =   2.1091E-01
+ffprime =   1.0974E+00
+n0 for parallel boundary condition:   1744
+info: dpdx_pm from geometry:     1.031567
+
+Constructing rhs for perf_vec = 111211111
+dgdxy_term is of type dgdxy_ff1_t                             
+dfielddxy_term is of type dchidxy_ff1_t                           
+dzv_term is of type dzv_1_r_t                               
+dchidz_term is of type dchidz_ff_t                             
+dfdxy_term is of type dfdxy_ff_t                              
+nonlinear_term is of type ff_nonlinear_term_t                     
+collisions_o is of type collisions_landau_t                     
+collisions_o%testpart_computer is of type testpart_computer_landau_2_t            
+collisions_o%fieldpart_computer is of type fieldpart_computer_landau_2_t           
+Ions are adiabatic
+Type of field_solver is fieldsolver_ff_t                        
+Type of fields_general is emfields_t                              
+Type of dfb_f is dist_func_block_t                       
+Type of dfb_h is dist_func_block_t                       
+CPU memory usage of             rhs construct is      0.2305MB, rss=            172.9961MB
+
+END constructing rhs for perf_vec = 111211111
+N for parallel boundary condition: 400
+single precision computation
+parallel direction: 4th order Arakawa scheme
+=========== hyper diffusion ============
+prefactor for z-hyperdiffusion is scaled with dz
+hyp_z =     -5.000
+no explicit parallel velocity damping
+ 
+recurrence times for the different species:
+electrons    :    0.37886
+
+-------------------------------------------------------
+---- Initializing CalFullRhs                       ----
+-------------------------------------------------------
+
+nonlinear type is ff_nonlinear_term_t                      with a blocksize of        6
+hypv is of type hypv_h_ijl_t                            
+CPU memory usage of     initialize_CalFullRhs is     20.8711MB, rss=            193.8672MB
+Ions are adiabatic
+nonlinear computation
+CPU memory usage of       finalize_CalFullRhs is      0.0625MB, rss=            205.6953MB
+CPU memory usage of             optimize_perf is     36.1172MB, rss=            205.6953MB
+Testing parallelization (svwxyz):    1   2   4   1   4  56
+Using radial coordinate with dx/dr =   1.0000E+00
+Setting C_xy =   1.0000E+00 C_y =   2.1091E-01 C_x' =   4.7415E+00
+B_unit/Bref conversion factor =   2.8056E+00
+dPsi/dr =   2.1091E-01
+ffprime =   1.0974E+00
+n0 for parallel boundary condition:   1744
+info: dpdx_pm from geometry:     1.031567
+
+Constructing rhs for perf_vec = 111211111
+dgdxy_term is of type dgdxy_ff1_t                             
+dfielddxy_term is of type dchidxy_ff1_t                           
+dzv_term is of type dzv_1_r_t                               
+dchidz_term is of type dchidz_ff_t                             
+dfdxy_term is of type dfdxy_ff_t                              
+nonlinear_term is of type ff_nonlinear_term_t                     
+collisions_o is of type collisions_landau_t                     
+collisions_o%testpart_computer is of type testpart_computer_landau_2_t            
+collisions_o%fieldpart_computer is of type fieldpart_computer_landau_2_t           
+Ions are adiabatic
+Type of field_solver is fieldsolver_ff_t                        
+Type of fields_general is emfields_t                              
+Type of dfb_f is dist_func_block_t                       
+Type of dfb_h is dist_func_block_t                       
+CPU memory usage of             rhs construct is      0.0000MB, rss=            205.8125MB
+
+END constructing rhs for perf_vec = 111211111
+N for parallel boundary condition: 400
+single precision computation
+parallel direction: 4th order Arakawa scheme
+=========== hyper diffusion ============
+prefactor for z-hyperdiffusion is scaled with dz
+hyp_z =     -5.000
+no explicit parallel velocity damping
+ 
+recurrence times for the different species:
+electrons    :    0.37886
+
+-------------------------------------------------------
+---- Initializing CalFullRhs                       ----
+-------------------------------------------------------
+
+nonlinear type is ff_nonlinear_term_t                      with a blocksize of        6
+hypv is of type hypv_h_ijl_t                            
+CPU memory usage of     initialize_CalFullRhs is      0.0078MB, rss=            205.8203MB
+Ions are adiabatic
+nonlinear computation
+CPU memory usage of       finalize_CalFullRhs is      0.1719MB, rss=            206.0195MB
+CPU memory usage of             optimize_perf is      0.3242MB, rss=            206.0195MB
+Testing parallelization (svwxyz):    1   4   8   1   4  14
+Using radial coordinate with dx/dr =   1.0000E+00
+Setting C_xy =   1.0000E+00 C_y =   2.1091E-01 C_x' =   4.7415E+00
+B_unit/Bref conversion factor =   2.8056E+00
+dPsi/dr =   2.1091E-01
+ffprime =   1.0974E+00
+n0 for parallel boundary condition:   1744
+info: dpdx_pm from geometry:     1.031567
+
+Constructing rhs for perf_vec = 111211111
+dgdxy_term is of type dgdxy_ff1_t                             
+dfielddxy_term is of type dchidxy_ff1_t                           
+dzv_term is of type dzv_1_r_t                               
+dchidz_term is of type dchidz_ff_t                             
+dfdxy_term is of type dfdxy_ff_t                              
+nonlinear_term is of type ff_nonlinear_term_t                     
+collisions_o is of type collisions_landau_t                     
+collisions_o%testpart_computer is of type testpart_computer_landau_2_t            
+collisions_o%fieldpart_computer is of type fieldpart_computer_landau_2_t           
+Ions are adiabatic
+Type of field_solver is fieldsolver_ff_t                        
+Type of fields_general is emfields_t                              
+Type of dfb_f is dist_func_block_t                       
+Type of dfb_h is dist_func_block_t                       
+CPU memory usage of             rhs construct is      0.0000MB, rss=            206.1055MB
+
+END constructing rhs for perf_vec = 111211111
+N for parallel boundary condition: 400
+single precision computation
+parallel direction: 4th order Arakawa scheme
+=========== hyper diffusion ============
+prefactor for z-hyperdiffusion is scaled with dz
+hyp_z =     -5.000
+no explicit parallel velocity damping
+ 
+recurrence times for the different species:
+electrons    :    0.37886
+
+-------------------------------------------------------
+---- Initializing CalFullRhs                       ----
+-------------------------------------------------------
+
+nonlinear type is ff_nonlinear_term_t                      with a blocksize of        4
+hypv is of type hypv_h_ijl_t                            
+CPU memory usage of     initialize_CalFullRhs is      0.0039MB, rss=            206.1094MB
+Ions are adiabatic
+nonlinear computation
+CPU memory usage of       finalize_CalFullRhs is      0.0000MB, rss=            207.6172MB
+CPU memory usage of             optimize_perf is      1.5977MB, rss=            207.6172MB
+Testing parallelization (svwxyz):    1   4   4   1   4  28
+Using radial coordinate with dx/dr =   1.0000E+00
+Setting C_xy =   1.0000E+00 C_y =   2.1091E-01 C_x' =   4.7415E+00
+B_unit/Bref conversion factor =   2.8056E+00
+dPsi/dr =   2.1091E-01
+ffprime =   1.0974E+00
+n0 for parallel boundary condition:   1744
+info: dpdx_pm from geometry:     1.031567
+
+Constructing rhs for perf_vec = 111211111
+dgdxy_term is of type dgdxy_ff1_t                             
+dfielddxy_term is of type dchidxy_ff1_t                           
+dzv_term is of type dzv_1_r_t                               
+dchidz_term is of type dchidz_ff_t                             
+dfdxy_term is of type dfdxy_ff_t                              
+nonlinear_term is of type ff_nonlinear_term_t                     
+collisions_o is of type collisions_landau_t                     
+collisions_o%testpart_computer is of type testpart_computer_landau_2_t            
+collisions_o%fieldpart_computer is of type fieldpart_computer_landau_2_t           
+Ions are adiabatic
+Type of field_solver is fieldsolver_ff_t                        
+Type of fields_general is emfields_t                              
+Type of dfb_f is dist_func_block_t                       
+Type of dfb_h is dist_func_block_t                       
+CPU memory usage of             rhs construct is      0.0000MB, rss=            207.6602MB
+
+END constructing rhs for perf_vec = 111211111
+N for parallel boundary condition: 400
+single precision computation
+parallel direction: 4th order Arakawa scheme
+=========== hyper diffusion ============
+prefactor for z-hyperdiffusion is scaled with dz
+hyp_z =     -5.000
+no explicit parallel velocity damping
+ 
+recurrence times for the different species:
+electrons    :    0.37886
+
+-------------------------------------------------------
+---- Initializing CalFullRhs                       ----
+-------------------------------------------------------
+
+nonlinear type is ff_nonlinear_term_t                      with a blocksize of        6
+hypv is of type hypv_h_ijl_t                            
+CPU memory usage of     initialize_CalFullRhs is      0.0312MB, rss=            207.6914MB
+Ions are adiabatic
+nonlinear computation
+CPU memory usage of       finalize_CalFullRhs is      0.1250MB, rss=            207.8203MB
+CPU memory usage of             optimize_perf is      0.1914MB, rss=            207.8203MB
+Testing parallelization (svwxyz):    1   4   2   1   4  56
+Using radial coordinate with dx/dr =   1.0000E+00
+Setting C_xy =   1.0000E+00 C_y =   2.1091E-01 C_x' =   4.7415E+00
+B_unit/Bref conversion factor =   2.8056E+00
+dPsi/dr =   2.1091E-01
+ffprime =   1.0974E+00
+n0 for parallel boundary condition:   1744
+info: dpdx_pm from geometry:     1.031567
+
+Constructing rhs for perf_vec = 111211111
+dgdxy_term is of type dgdxy_ff1_t                             
+dfielddxy_term is of type dchidxy_ff1_t                           
+dzv_term is of type dzv_1_r_t                               
+dchidz_term is of type dchidz_ff_t                             
+dfdxy_term is of type dfdxy_ff_t                              
+nonlinear_term is of type ff_nonlinear_term_t                     
+collisions_o is of type collisions_landau_t                     
+collisions_o%testpart_computer is of type testpart_computer_landau_2_t            
+collisions_o%fieldpart_computer is of type fieldpart_computer_landau_2_t           
+Ions are adiabatic
+Type of field_solver is fieldsolver_ff_t                        
+Type of fields_general is emfields_t                              
+Type of dfb_f is dist_func_block_t                       
+Type of dfb_h is dist_func_block_t                       
+CPU memory usage of             rhs construct is      0.0000MB, rss=            207.9727MB
+
+END constructing rhs for perf_vec = 111211111
+N for parallel boundary condition: 400
+single precision computation
+parallel direction: 4th order Arakawa scheme
+=========== hyper diffusion ============
+prefactor for z-hyperdiffusion is scaled with dz
+hyp_z =     -5.000
+no explicit parallel velocity damping
+ 
+recurrence times for the different species:
+electrons    :    0.37886
+
+-------------------------------------------------------
+---- Initializing CalFullRhs                       ----
+-------------------------------------------------------
+
+nonlinear type is ff_nonlinear_term_t                      with a blocksize of        6
+hypv is of type hypv_h_ijl_t                            
+CPU memory usage of     initialize_CalFullRhs is      0.0039MB, rss=            207.9766MB
+Ions are adiabatic
+nonlinear computation
+CPU memory usage of       finalize_CalFullRhs is      0.0977MB, rss=            208.1016MB
+CPU memory usage of             optimize_perf is      0.1328MB, rss=            208.1016MB
+Testing parallelization (svwxyz):    1   8   8   1   4   7
+Using radial coordinate with dx/dr =   1.0000E+00
+Setting C_xy =   1.0000E+00 C_y =   2.1091E-01 C_x' =   4.7415E+00
+B_unit/Bref conversion factor =   2.8056E+00
+dPsi/dr =   2.1091E-01
+ffprime =   1.0974E+00
+n0 for parallel boundary condition:   1744
+info: dpdx_pm from geometry:     1.031567
+
+Constructing rhs for perf_vec = 111211111
+dgdxy_term is of type dgdxy_ff1_t                             
+dfielddxy_term is of type dchidxy_ff1_t                           
+dzv_term is of type dzv_1_r_t                               
+dchidz_term is of type dchidz_ff_t                             
+dfdxy_term is of type dfdxy_ff_t                              
+nonlinear_term is of type ff_nonlinear_term_t                     
+collisions_o is of type collisions_landau_t                     
+collisions_o%testpart_computer is of type testpart_computer_landau_2_t            
+collisions_o%fieldpart_computer is of type fieldpart_computer_landau_2_t           
+Ions are adiabatic
+Type of field_solver is fieldsolver_ff_t                        
+Type of fields_general is emfields_t                              
+Type of dfb_f is dist_func_block_t                       
+Type of dfb_h is dist_func_block_t                       
+CPU memory usage of             rhs construct is      0.0000MB, rss=            208.1680MB
+
+END constructing rhs for perf_vec = 111211111
+N for parallel boundary condition: 400
+single precision computation
+parallel direction: 4th order Arakawa scheme
+=========== hyper diffusion ============
+prefactor for z-hyperdiffusion is scaled with dz
+hyp_z =     -5.000
+no explicit parallel velocity damping
+ 
+recurrence times for the different species:
+electrons    :    0.37886
+
+-------------------------------------------------------
+---- Initializing CalFullRhs                       ----
+-------------------------------------------------------
+
+nonlinear type is ff_nonlinear_term_t                      with a blocksize of        6
+hypv is of type hypv_h_ijl_t                            
+CPU memory usage of     initialize_CalFullRhs is      0.1055MB, rss=            208.2734MB
+Ions are adiabatic
+nonlinear computation
+CPU memory usage of       finalize_CalFullRhs is      0.0391MB, rss=            227.7383MB
+CPU memory usage of             optimize_perf is    -27.1055MB, rss=            180.9961MB
+Testing parallelization (svwxyz):    1   8   4   1   4  14
+Using radial coordinate with dx/dr =   1.0000E+00
+Setting C_xy =   1.0000E+00 C_y =   2.1091E-01 C_x' =   4.7415E+00
+B_unit/Bref conversion factor =   2.8056E+00
+dPsi/dr =   2.1091E-01
+ffprime =   1.0974E+00
+n0 for parallel boundary condition:   1744
+info: dpdx_pm from geometry:     1.031567
+
+Constructing rhs for perf_vec = 111211111
+dgdxy_term is of type dgdxy_ff1_t                             
+dfielddxy_term is of type dchidxy_ff1_t                           
+dzv_term is of type dzv_1_r_t                               
+dchidz_term is of type dchidz_ff_t                             
+dfdxy_term is of type dfdxy_ff_t                              
+nonlinear_term is of type ff_nonlinear_term_t                     
+collisions_o is of type collisions_landau_t                     
+collisions_o%testpart_computer is of type testpart_computer_landau_2_t            
+collisions_o%fieldpart_computer is of type fieldpart_computer_landau_2_t           
+Ions are adiabatic
+Type of field_solver is fieldsolver_ff_t                        
+Type of fields_general is emfields_t                              
+Type of dfb_f is dist_func_block_t                       
+Type of dfb_h is dist_func_block_t                       
+CPU memory usage of             rhs construct is      0.2305MB, rss=            184.3672MB
+
+END constructing rhs for perf_vec = 111211111
+N for parallel boundary condition: 400
+single precision computation
+parallel direction: 4th order Arakawa scheme
+=========== hyper diffusion ============
+prefactor for z-hyperdiffusion is scaled with dz
+hyp_z =     -5.000
+no explicit parallel velocity damping
+ 
+recurrence times for the different species:
+electrons    :    0.37886
+
+-------------------------------------------------------
+---- Initializing CalFullRhs                       ----
+-------------------------------------------------------
+
+nonlinear type is ff_nonlinear_term_t                      with a blocksize of        4
+hypv is of type hypv_h_ijl_t                            
+CPU memory usage of     initialize_CalFullRhs is     20.0703MB, rss=            204.4375MB
+Ions are adiabatic
+nonlinear computation
+CPU memory usage of       finalize_CalFullRhs is      0.0703MB, rss=            218.1289MB
+CPU memory usage of             optimize_perf is     37.1328MB, rss=            218.1289MB
+Testing parallelization (svwxyz):    1   8   2   1   4  28
+Using radial coordinate with dx/dr =   1.0000E+00
+Setting C_xy =   1.0000E+00 C_y =   2.1091E-01 C_x' =   4.7415E+00
+B_unit/Bref conversion factor =   2.8056E+00
+dPsi/dr =   2.1091E-01
+ffprime =   1.0974E+00
+n0 for parallel boundary condition:   1744
+info: dpdx_pm from geometry:     1.031567
+
+Constructing rhs for perf_vec = 111211111
+dgdxy_term is of type dgdxy_ff1_t                             
+dfielddxy_term is of type dchidxy_ff1_t                           
+dzv_term is of type dzv_1_r_t                               
+dchidz_term is of type dchidz_ff_t                             
+dfdxy_term is of type dfdxy_ff_t                              
+nonlinear_term is of type ff_nonlinear_term_t                     
+collisions_o is of type collisions_landau_t                     
+collisions_o%testpart_computer is of type testpart_computer_landau_2_t            
+collisions_o%fieldpart_computer is of type fieldpart_computer_landau_2_t           
+Ions are adiabatic
+Type of field_solver is fieldsolver_ff_t                        
+Type of fields_general is emfields_t                              
+Type of dfb_f is dist_func_block_t                       
+Type of dfb_h is dist_func_block_t                       
+CPU memory usage of             rhs construct is      0.0000MB, rss=            218.2109MB
+
+END constructing rhs for perf_vec = 111211111
+N for parallel boundary condition: 400
+single precision computation
+parallel direction: 4th order Arakawa scheme
+=========== hyper diffusion ============
+prefactor for z-hyperdiffusion is scaled with dz
+hyp_z =     -5.000
+no explicit parallel velocity damping
+ 
+recurrence times for the different species:
+electrons    :    0.37886
+
+-------------------------------------------------------
+---- Initializing CalFullRhs                       ----
+-------------------------------------------------------
+
+nonlinear type is ff_nonlinear_term_t                      with a blocksize of        6
+hypv is of type hypv_h_ijl_t                            
+CPU memory usage of     initialize_CalFullRhs is      0.0039MB, rss=            218.2148MB
+Ions are adiabatic
+nonlinear computation
+CPU memory usage of       finalize_CalFullRhs is      0.1641MB, rss=            218.4102MB
+CPU memory usage of             optimize_perf is      0.2812MB, rss=            218.4102MB
+Testing parallelization (svwxyz):    1   8   1   1   4  56
+Using radial coordinate with dx/dr =   1.0000E+00
+Setting C_xy =   1.0000E+00 C_y =   2.1091E-01 C_x' =   4.7415E+00
+B_unit/Bref conversion factor =   2.8056E+00
+dPsi/dr =   2.1091E-01
+ffprime =   1.0974E+00
+n0 for parallel boundary condition:   1744
+info: dpdx_pm from geometry:     1.031567
+
+Constructing rhs for perf_vec = 111211111
+dgdxy_term is of type dgdxy_ff1_t                             
+dfielddxy_term is of type dchidxy_ff1_t                           
+dzv_term is of type dzv_1_r_t                               
+dchidz_term is of type dchidz_ff_t                             
+dfdxy_term is of type dfdxy_ff_t                              
+nonlinear_term is of type ff_nonlinear_term_t                     
+collisions_o is of type collisions_landau_t                     
+collisions_o%testpart_computer is of type testpart_computer_landau_2_t            
+collisions_o%fieldpart_computer is of type fieldpart_computer_landau_2_t           
+Ions are adiabatic
+Type of field_solver is fieldsolver_ff_t                        
+Type of fields_general is emfields_t                              
+Type of dfb_f is dist_func_block_t                       
+Type of dfb_h is dist_func_block_t                       
+CPU memory usage of             rhs construct is      0.0000MB, rss=            218.4727MB
+
+END constructing rhs for perf_vec = 111211111
+N for parallel boundary condition: 400
+single precision computation
+parallel direction: 4th order Arakawa scheme
+=========== hyper diffusion ============
+prefactor for z-hyperdiffusion is scaled with dz
+hyp_z =     -5.000
+no explicit parallel velocity damping
+ 
+recurrence times for the different species:
+electrons    :    0.37886
+
+-------------------------------------------------------
+---- Initializing CalFullRhs                       ----
+-------------------------------------------------------
+
+nonlinear type is ff_nonlinear_term_t                      with a blocksize of        6
+hypv is of type hypv_h_ijl_t                            
+CPU memory usage of     initialize_CalFullRhs is      0.0039MB, rss=            218.4766MB
+Ions are adiabatic
+nonlinear computation
+CPU memory usage of       finalize_CalFullRhs is      0.0547MB, rss=            219.0703MB
+CPU memory usage of             optimize_perf is      0.6602MB, rss=            219.0703MB
+Testing parallelization (svwxyz):    1  16   4   1   4   7
+Using radial coordinate with dx/dr =   1.0000E+00
+Setting C_xy =   1.0000E+00 C_y =   2.1091E-01 C_x' =   4.7415E+00
+B_unit/Bref conversion factor =   2.8056E+00
+dPsi/dr =   2.1091E-01
+ffprime =   1.0974E+00
+n0 for parallel boundary condition:   1744
+info: dpdx_pm from geometry:     1.031567
+
+Constructing rhs for perf_vec = 111211111
+dgdxy_term is of type dgdxy_ff1_t                             
+dfielddxy_term is of type dchidxy_ff1_t                           
+dzv_term is of type dzv_1_r_t                               
+dchidz_term is of type dchidz_ff_t                             
+dfdxy_term is of type dfdxy_ff_t                              
+nonlinear_term is of type ff_nonlinear_term_t                     
+collisions_o is of type collisions_landau_t                     
+collisions_o%testpart_computer is of type testpart_computer_landau_2_t            
+collisions_o%fieldpart_computer is of type fieldpart_computer_landau_2_t           
+Ions are adiabatic
+Type of field_solver is fieldsolver_ff_t                        
+Type of fields_general is emfields_t                              
+Type of dfb_f is dist_func_block_t                       
+Type of dfb_h is dist_func_block_t                       
+CPU memory usage of             rhs construct is      0.0000MB, rss=            219.1367MB
+
+END constructing rhs for perf_vec = 111211111
+N for parallel boundary condition: 400
+single precision computation
+parallel direction: 4th order Arakawa scheme
+=========== hyper diffusion ============
+prefactor for z-hyperdiffusion is scaled with dz
+hyp_z =     -5.000
+no explicit parallel velocity damping
+ 
+recurrence times for the different species:
+electrons    :    0.37886
+
+-------------------------------------------------------
+---- Initializing CalFullRhs                       ----
+-------------------------------------------------------
+
+nonlinear type is ff_nonlinear_term_t                      with a blocksize of        6
+hypv is of type hypv_h_ijl_t                            
+CPU memory usage of     initialize_CalFullRhs is      0.0000MB, rss=            219.1367MB
+Ions are adiabatic
+nonlinear computation
+CPU memory usage of       finalize_CalFullRhs is      0.1133MB, rss=            243.0938MB
+CPU memory usage of             optimize_perf is    -26.6562MB, rss=            192.4141MB
+Testing parallelization (svwxyz):    1  16   2   1   4  14
+Using radial coordinate with dx/dr =   1.0000E+00
+Setting C_xy =   1.0000E+00 C_y =   2.1091E-01 C_x' =   4.7415E+00
+B_unit/Bref conversion factor =   2.8056E+00
+dPsi/dr =   2.1091E-01
+ffprime =   1.0974E+00
+n0 for parallel boundary condition:   1744
+info: dpdx_pm from geometry:     1.031567
+
+Constructing rhs for perf_vec = 111211111
+dgdxy_term is of type dgdxy_ff1_t                             
+dfielddxy_term is of type dchidxy_ff1_t                           
+dzv_term is of type dzv_1_r_t                               
+dchidz_term is of type dchidz_ff_t                             
+dfdxy_term is of type dfdxy_ff_t                              
+nonlinear_term is of type ff_nonlinear_term_t                     
+collisions_o is of type collisions_landau_t                     
+collisions_o%testpart_computer is of type testpart_computer_landau_2_t            
+collisions_o%fieldpart_computer is of type fieldpart_computer_landau_2_t           
+Ions are adiabatic
+Type of field_solver is fieldsolver_ff_t                        
+Type of fields_general is emfields_t                              
+Type of dfb_f is dist_func_block_t                       
+Type of dfb_h is dist_func_block_t                       
+CPU memory usage of             rhs construct is      0.2305MB, rss=            195.7773MB
+
+END constructing rhs for perf_vec = 111211111
+N for parallel boundary condition: 400
+single precision computation
+parallel direction: 4th order Arakawa scheme
+=========== hyper diffusion ============
+prefactor for z-hyperdiffusion is scaled with dz
+hyp_z =     -5.000
+no explicit parallel velocity damping
+ 
+recurrence times for the different species:
+electrons    :    0.37886
+
+-------------------------------------------------------
+---- Initializing CalFullRhs                       ----
+-------------------------------------------------------
+
+nonlinear type is ff_nonlinear_term_t                      with a blocksize of        4
+hypv is of type hypv_h_ijl_t                            
+CPU memory usage of     initialize_CalFullRhs is     24.6523MB, rss=            220.4297MB
+Ions are adiabatic
+nonlinear computation
+CPU memory usage of       finalize_CalFullRhs is      0.0820MB, rss=            236.4062MB
+CPU memory usage of             optimize_perf is      0.4531MB, rss=            192.8672MB
+Testing parallelization (svwxyz):    1  16   1   1   4  28
+Using radial coordinate with dx/dr =   1.0000E+00
+Setting C_xy =   1.0000E+00 C_y =   2.1091E-01 C_x' =   4.7415E+00
+B_unit/Bref conversion factor =   2.8056E+00
+dPsi/dr =   2.1091E-01
+ffprime =   1.0974E+00
+n0 for parallel boundary condition:   1744
+info: dpdx_pm from geometry:     1.031567
+
+Constructing rhs for perf_vec = 111211111
+dgdxy_term is of type dgdxy_ff1_t                             
+dfielddxy_term is of type dchidxy_ff1_t                           
+dzv_term is of type dzv_1_r_t                               
+dchidz_term is of type dchidz_ff_t                             
+dfdxy_term is of type dfdxy_ff_t                              
+nonlinear_term is of type ff_nonlinear_term_t                     
+collisions_o is of type collisions_landau_t                     
+collisions_o%testpart_computer is of type testpart_computer_landau_2_t            
+collisions_o%fieldpart_computer is of type fieldpart_computer_landau_2_t           
+Ions are adiabatic
+Type of field_solver is fieldsolver_ff_t                        
+Type of fields_general is emfields_t                              
+Type of dfb_f is dist_func_block_t                       
+Type of dfb_h is dist_func_block_t                       
+CPU memory usage of             rhs construct is      0.2305MB, rss=            196.2383MB
+
+END constructing rhs for perf_vec = 111211111
+N for parallel boundary condition: 400
+single precision computation
+parallel direction: 4th order Arakawa scheme
+=========== hyper diffusion ============
+prefactor for z-hyperdiffusion is scaled with dz
+hyp_z =     -5.000
+no explicit parallel velocity damping
+ 
+recurrence times for the different species:
+electrons    :    0.37886
+
+-------------------------------------------------------
+---- Initializing CalFullRhs                       ----
+-------------------------------------------------------
+
+nonlinear type is ff_nonlinear_term_t                      with a blocksize of        6
+hypv is of type hypv_h_ijl_t                            
+CPU memory usage of     initialize_CalFullRhs is     21.1289MB, rss=            217.3672MB
+Ions are adiabatic
+nonlinear computation
+CPU memory usage of       finalize_CalFullRhs is      0.1172MB, rss=            233.9961MB
+CPU memory usage of             optimize_perf is      0.2188MB, rss=            193.0859MB
+Checked   29 parallelizations.
+ 
+Choice for parallelization:    1   2   4   1   4  56
+Choice for alternative routines:  1 1 1 2 1 1 1 1 1
+Choice for number of blocks:    16
+Fastest tagvals =  {  -1 {  -1 } }
+Time for chosen settings:  2.4165E-01
+using BLAS routines for (i,j) loops: no
+ 
+time for performance optimization:    70.57s
+ 
+CPU memory usage of       autoparallelization is     74.3750MB, rss=            193.0859MB
+ timescheme_o is of type eRK_standard_t                          
+*************************************************************
+Starting time step computation with PETSC-3.14.4/SLEPc-3.14.1
+*************************************************************
+selecting   3  ky modes
+
+Constructing rhs for perf_vec = 111211111
+dgdxy_term is of type dgdxy_ff1_t                             
+dfielddxy_term is of type dchidxy_ff1_t                           
+dzv_term is of type dzv_1_r_t                               
+dchidz_term is of type dchidz_ff_t                             
+dfdxy_term is of type dfdxy_ff_t                              
+collisions_o is of type collisions_landau_t                     
+collisions_o%testpart_computer is of type testpart_computer_landau_2_t            
+collisions_o%fieldpart_computer is of type fieldpart_computer_landau_2_t           
+Ions are adiabatic
+Type of field_solver is fieldsolver_ff_t                        
+Type of fields_general is emfields_t                              
+Type of dfb_f is dist_func_block_t                       
+Type of dfb_h is dist_func_block_t                       
+CPU memory usage of             rhs construct is      0.0039MB, rss=            193.6641MB
+
+END constructing rhs for perf_vec = 111211111
+Using PETSc version 3.14.4-p00
+
+-------------------------------------------------------
+---- Initializing CalFullRhs                       ----
+-------------------------------------------------------
+
+hypv is of type hypv_h_ijl_t                            
+CPU memory usage of     initialize_CalFullRhs is      3.0938MB, rss=            196.7578MB
+Ions are adiabatic
+EV solver/preconditioner: none / none
+using   -2 test vectors with length  16472064, i.e. -502.69MB
+precision:   0.1000E-03
+CPU memory usage of       finalize_CalFullRhs is      0.1562MB, rss=            209.0000MB
+Using radial coordinate with dx/dr =   1.0000E+00
+Setting C_xy =   1.0000E+00 C_y =   2.1091E-01 C_x' =   4.7415E+00
+B_unit/Bref conversion factor =   2.8056E+00
+dPsi/dr =   2.1091E-01
+ffprime =   1.0974E+00
+n0 for parallel boundary condition:   1744
+info: dpdx_pm from geometry:     1.031567
+N for parallel boundary condition: 400
+single precision computation
+parallel direction: 4th order Arakawa scheme
+=========== hyper diffusion ============
+prefactor for z-hyperdiffusion is scaled with dz
+hyp_z =     -5.000
+no explicit parallel velocity damping
+ 
+recurrence times for the different species:
+electrons    :    0.37886
+
+Constructing rhs for perf_vec = 111211111
+dgdxy_term is of type dgdxy_ff1_t                             
+dfielddxy_term is of type dchidxy_ff1_t                           
+dzv_term is of type dzv_1_r_t                               
+dchidz_term is of type dchidz_ff_t                             
+dfdxy_term is of type dfdxy_ff_t                              
+collisions_o is of type collisions_landau_t                     
+collisions_o%testpart_computer is of type testpart_computer_landau_2_t            
+collisions_o%fieldpart_computer is of type fieldpart_computer_landau_2_t           
+Ions are adiabatic
+Type of field_solver is fieldsolver_ff_t                        
+Type of fields_general is emfields_t                              
+Type of dfb_f is dist_func_block_t                       
+Type of dfb_h is dist_func_block_t                       
+CPU memory usage of             rhs construct is      0.0039MB, rss=            209.0039MB
+
+END constructing rhs for perf_vec = 111211111
+Using PETSc version 3.14.4-p00
+
+-------------------------------------------------------
+---- Initializing CalFullRhs                       ----
+-------------------------------------------------------
+
+hypv is of type hypv_h_ijl_t                            
+CPU memory usage of     initialize_CalFullRhs is      0.0000MB, rss=            209.0039MB
+Ions are adiabatic
+CPU memory usage of       finalize_CalFullRhs is      0.0312MB, rss=            213.8555MB
+Using radial coordinate with dx/dr =   1.0000E+00
+Setting C_xy =   1.0000E+00 C_y =   2.1091E-01 C_x' =   4.7415E+00
+B_unit/Bref conversion factor =   2.8056E+00
+dPsi/dr =   2.1091E-01
+ffprime =   1.0974E+00
+n0 for parallel boundary condition:   1744
+info: dpdx_pm from geometry:     1.031567
+N for parallel boundary condition: 400
+single precision computation
+parallel direction: 4th order Arakawa scheme
+=========== hyper diffusion ============
+prefactor for z-hyperdiffusion is scaled with dz
+hyp_z =     -5.000
+no explicit parallel velocity damping
+ 
+recurrence times for the different species:
+electrons    :    0.37886
+
+Constructing rhs for perf_vec = 111211111
+dgdxy_term is of type dgdxy_ff1_t                             
+dfielddxy_term is of type dchidxy_ff1_t                           
+dzv_term is of type dzv_1_r_t                               
+dchidz_term is of type dchidz_ff_t                             
+dfdxy_term is of type dfdxy_ff_t                              
+collisions_o is of type collisions_landau_t                     
+collisions_o%testpart_computer is of type testpart_computer_landau_2_t            
+collisions_o%fieldpart_computer is of type fieldpart_computer_landau_2_t           
+Ions are adiabatic
+Type of field_solver is fieldsolver_ff_t                        
+Type of fields_general is emfields_t                              
+Type of dfb_f is dist_func_block_t                       
+Type of dfb_h is dist_func_block_t                       
+CPU memory usage of             rhs construct is      0.0000MB, rss=            213.8555MB
+
+END constructing rhs for perf_vec = 111211111
+Using PETSc version 3.14.4-p00
+
+-------------------------------------------------------
+---- Initializing CalFullRhs                       ----
+-------------------------------------------------------
+
+hypv is of type hypv_h_ijl_t                            
+CPU memory usage of     initialize_CalFullRhs is      0.0000MB, rss=            213.8555MB
+Ions are adiabatic
+CPU memory usage of       finalize_CalFullRhs is      0.0469MB, rss=            213.9023MB
+time step limit set to  6.640E-05
+testing time step limit without hypz_compensation:
+Using radial coordinate with dx/dr =   1.0000E+00
+Setting C_xy =   1.0000E+00 C_y =   2.1091E-01 C_x' =   4.7415E+00
+B_unit/Bref conversion factor =   2.8056E+00
+dPsi/dr =   2.1091E-01
+ffprime =   1.0974E+00
+n0 for parallel boundary condition:   1744
+info: dpdx_pm from geometry:     1.031567
+N for parallel boundary condition: 400
+single precision computation
+parallel direction: 4th order Arakawa scheme
+=========== hyper diffusion ============
+prefactor for z-hyperdiffusion is scaled with dz
+hyp_z =     -5.000
+no explicit parallel velocity damping
+ 
+recurrence times for the different species:
+electrons    :    0.37886
+
+Constructing rhs for perf_vec = 111211111
+dgdxy_term is of type dgdxy_ff1_t                             
+dfielddxy_term is of type dchidxy_ff1_t                           
+dzv_term is of type dzv_1_r_t                               
+dchidz_term is of type dchidz_ff_t                             
+dfdxy_term is of type dfdxy_ff_t                              
+collisions_o is of type collisions_landau_t                     
+collisions_o%testpart_computer is of type testpart_computer_landau_2_t            
+collisions_o%fieldpart_computer is of type fieldpart_computer_landau_2_t           
+Ions are adiabatic
+Type of field_solver is fieldsolver_ff_t                        
+Type of fields_general is emfields_t                              
+Type of dfb_f is dist_func_block_t                       
+Type of dfb_h is dist_func_block_t                       
+CPU memory usage of             rhs construct is      0.0039MB, rss=            213.9062MB
+
+END constructing rhs for perf_vec = 111211111
+Using PETSc version 3.14.4-p00
+
+-------------------------------------------------------
+---- Initializing CalFullRhs                       ----
+-------------------------------------------------------
+
+hypv is of type hypv_h_ijl_t                            
+CPU memory usage of     initialize_CalFullRhs is      0.0000MB, rss=            213.9062MB
+Ions are adiabatic
+   ***no eigenvalues computed for ky=   0.000    !!***
+  number of ev iterations:    12
+CPU memory usage of       finalize_CalFullRhs is      0.0625MB, rss=            213.9688MB
+Using radial coordinate with dx/dr =   1.0000E+00
+Setting C_xy =   1.0000E+00 C_y =   2.1091E-01 C_x' =   4.7415E+00
+B_unit/Bref conversion factor =   2.8056E+00
+dPsi/dr =   2.1091E-01
+ffprime =   1.0974E+00
+n0 for parallel boundary condition:   1744
+info: dpdx_pm from geometry:     1.031567
+N for parallel boundary condition: 400
+single precision computation
+parallel direction: 4th order Arakawa scheme
+=========== hyper diffusion ============
+prefactor for z-hyperdiffusion is scaled with dz
+hyp_z =     -5.000
+no explicit parallel velocity damping
+ 
+recurrence times for the different species:
+electrons    :    0.37886
+
+Constructing rhs for perf_vec = 111211111
+dgdxy_term is of type dgdxy_ff1_t                             
+dfielddxy_term is of type dchidxy_ff1_t                           
+dzv_term is of type dzv_1_r_t                               
+dchidz_term is of type dchidz_ff_t                             
+dfdxy_term is of type dfdxy_ff_t                              
+collisions_o is of type collisions_landau_t                     
+collisions_o%testpart_computer is of type testpart_computer_landau_2_t            
+collisions_o%fieldpart_computer is of type fieldpart_computer_landau_2_t           
+Ions are adiabatic
+Type of field_solver is fieldsolver_ff_t                        
+Type of fields_general is emfields_t                              
+Type of dfb_f is dist_func_block_t                       
+Type of dfb_h is dist_func_block_t                       
+CPU memory usage of             rhs construct is      0.0000MB, rss=            213.9688MB
+
+END constructing rhs for perf_vec = 111211111
+Using PETSc version 3.14.4-p00
+
+-------------------------------------------------------
+---- Initializing CalFullRhs                       ----
+-------------------------------------------------------
+
+hypv is of type hypv_h_ijl_t                            
+CPU memory usage of     initialize_CalFullRhs is      0.0000MB, rss=            213.9688MB
+Ions are adiabatic
+   ***no eigenvalues computed for ky=   7.001    !!***
+  number of ev iterations:    12
+CPU memory usage of       finalize_CalFullRhs is      0.0664MB, rss=            214.0352MB
+Using radial coordinate with dx/dr =   1.0000E+00
+Setting C_xy =   1.0000E+00 C_y =   2.1091E-01 C_x' =   4.7415E+00
+B_unit/Bref conversion factor =   2.8056E+00
+dPsi/dr =   2.1091E-01
+ffprime =   1.0974E+00
+n0 for parallel boundary condition:   1744
+info: dpdx_pm from geometry:     1.031567
+N for parallel boundary condition: 400
+single precision computation
+parallel direction: 4th order Arakawa scheme
+=========== hyper diffusion ============
+prefactor for z-hyperdiffusion is scaled with dz
+hyp_z =     -5.000
+no explicit parallel velocity damping
+ 
+recurrence times for the different species:
+electrons    :    0.37886
+
+Constructing rhs for perf_vec = 111211111
+dgdxy_term is of type dgdxy_ff1_t                             
+dfielddxy_term is of type dchidxy_ff1_t                           
+dzv_term is of type dzv_1_r_t                               
+dchidz_term is of type dchidz_ff_t                             
+dfdxy_term is of type dfdxy_ff_t                              
+collisions_o is of type collisions_landau_t                     
+collisions_o%testpart_computer is of type testpart_computer_landau_2_t            
+collisions_o%fieldpart_computer is of type fieldpart_computer_landau_2_t           
+Ions are adiabatic
+Type of field_solver is fieldsolver_ff_t                        
+Type of fields_general is emfields_t                              
+Type of dfb_f is dist_func_block_t                       
+Type of dfb_h is dist_func_block_t                       
+CPU memory usage of             rhs construct is      0.0000MB, rss=            214.0352MB
+
+END constructing rhs for perf_vec = 111211111
+Using PETSc version 3.14.4-p00
+
+-------------------------------------------------------
+---- Initializing CalFullRhs                       ----
+-------------------------------------------------------
+
+hypv is of type hypv_h_ijl_t                            
+CPU memory usage of     initialize_CalFullRhs is      0.0000MB, rss=            214.0352MB
+Ions are adiabatic
+   ***no eigenvalues computed for ky=   161.0    !!***
+  number of ev iterations:    12
+CPU memory usage of       finalize_CalFullRhs is      0.0703MB, rss=            214.1055MB
+  no additional restriction due to small real eigenvalue found.
+  not using hyp_z compensation.
+testing time step limit for collision scheme:
+Using radial coordinate with dx/dr =   1.0000E+00
+Setting C_xy =   1.0000E+00 C_y =   2.1091E-01 C_x' =   4.7415E+00
+B_unit/Bref conversion factor =   2.8056E+00
+dPsi/dr =   2.1091E-01
+ffprime =   1.0974E+00
+n0 for parallel boundary condition:   1744
+info: dpdx_pm from geometry:     1.031567
+N for parallel boundary condition: 400
+single precision computation
+parallel direction: 4th order Arakawa scheme
+=========== hyper diffusion ============
+prefactor for z-hyperdiffusion is scaled with dz
+hyp_z =     -5.000
+no explicit parallel velocity damping
+ 
+recurrence times for the different species:
+electrons    :    0.37886
+
+Constructing rhs for perf_vec = 111211111
+dgdxy_term is of type dgdxy_ff1_t                             
+dfielddxy_term is of type dchidxy_ff1_t                           
+dzv_term is of type dzv_1_r_t                               
+dchidz_term is of type dchidz_ff_t                             
+dfdxy_term is of type dfdxy_ff_t                              
+collisions_o is of type collisions_landau_t                     
+collisions_o%testpart_computer is of type testpart_computer_landau_2_t            
+collisions_o%fieldpart_computer is of type fieldpart_computer_landau_2_t           
+Ions are adiabatic
+Type of field_solver is fieldsolver_ff_t                        
+Type of fields_general is emfields_t                              
+Type of dfb_f is dist_func_block_t                       
+Type of dfb_h is dist_func_block_t                       
+CPU memory usage of             rhs construct is      0.0000MB, rss=            214.1055MB
+
+END constructing rhs for perf_vec = 111211111
+Using PETSc version 3.14.4-p00
+
+-------------------------------------------------------
+---- Initializing CalFullRhs                       ----
+-------------------------------------------------------
+
+hypv is of type hypv_h_ijl_t                            
+CPU memory usage of     initialize_CalFullRhs is      0.0000MB, rss=            214.1055MB
+Ions are adiabatic
+CPU memory usage of       finalize_CalFullRhs is      0.0625MB, rss=            214.1680MB
+  RKC1 : time step limit is  1.430E-03
+  RKC2 : time step limit is  5.600E-03
+  RKC3 : time step limit is  1.250E-02
+  RKC4 : time step limit is  1.900E-02
+  adaptive coll_split_scheme: we chose RKC1
+dt_max =    6.640E-05 found with SLEPc
+calculated    6 eigenvectors
+time for computation of dt_max:    16.386 sec
+******************************************************
+initialize the parallelization (xyzvws):    1   4  56   2   4   1
+and the perf_vec=111211111
+Using radial coordinate with dx/dr =   1.0000E+00
+Setting C_xy =   1.0000E+00 C_y =   2.1091E-01 C_x' =   4.7415E+00
+B_unit/Bref conversion factor =   2.8056E+00
+dPsi/dr =   2.1091E-01
+ffprime =   1.0974E+00
+n0 for parallel boundary condition:   1744
+info: dpdx_pm from geometry:     1.031567
+N for parallel boundary condition: 400
+single precision computation
+parallel direction: 4th order Arakawa scheme
+=========== hyper diffusion ============
+prefactor for z-hyperdiffusion is scaled with dz
+hyp_z =     -5.000
+no explicit parallel velocity damping
+ 
+recurrence times for the different species:
+electrons    :    0.37886
+ timescheme_o is of type eRK_standard_t                          
+
+Constructing rhs for perf_vec = 111211111
+dgdxy_term is of type dgdxy_ff1_t                             
+dfielddxy_term is of type dchidxy_ff1_t                           
+dzv_term is of type dzv_1_r_t                               
+dchidz_term is of type dchidz_ff_t                             
+dfdxy_term is of type dfdxy_ff_t                              
+nonlinear_term is of type ff_nonlinear_term_t                     
+collisions_o is of type collisions_landau_t                     
+collisions_o%testpart_computer is of type testpart_computer_landau_2_t            
+collisions_o%fieldpart_computer is of type fieldpart_computer_landau_2_t           
+Ions are adiabatic
+Type of field_solver is fieldsolver_ff_t                        
+Type of fields_general is emfields_t                              
+Type of dfb_f is dist_func_block_t                       
+Type of dfb_h is dist_func_block_t                       
+CPU memory usage of             rhs construct is      0.0078MB, rss=            214.4336MB
+
+END constructing rhs for perf_vec = 111211111
+
+-------------------------------------------------------
+---- Initializing CalFullRhs                       ----
+-------------------------------------------------------
+
+nonlinear type is ff_nonlinear_term_t                      with a blocksize of        6
+hypv is of type hypv_h_ijl_t                            
+CPU memory usage of     initialize_CalFullRhs is     14.8086MB, rss=            229.2422MB
+Ions are adiabatic
+nonlinear computation
+ 
+initialization: ppj                 
+  power law in kx and ky, powers of jacobian in z
+  kx to the power of -1.000E+00, ky to the power of -1.000E+00, jacobian to the power of  2.000E+00
+ 
+CPU memory usage of            initialization is     24.5000MB, rss=            238.6680MB
+CPU memory usage of      initialize_all_diags is      2.9844MB, rss=            241.6523MB
+CPU memory usage of                 GPU_usage is      0.0352MB, rss=            241.6875MB
+Time for s_checkpoint out:     1.535 sec
+CPU memory usage of            exec_all_diags is     93.7383MB, rss=            335.4258MB
+ 
+*** entering time loop ***
+maximal     300000 timesteps.
+Time for s_checkpoint out:     1.015 sec
+Time for s_checkpoint out:     1.127 sec
+Time for s_checkpoint out:     1.244 sec
+Time for s_checkpoint out:     0.913 sec
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 0 PID 104092 RUNNING AT c202-003
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 1 PID 104093 RUNNING AT c202-003
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 2 PID 104094 RUNNING AT c202-003
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 3 PID 104095 RUNNING AT c202-003
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 4 PID 104096 RUNNING AT c202-003
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 5 PID 104097 RUNNING AT c202-003
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 6 PID 104098 RUNNING AT c202-003
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 7 PID 104099 RUNNING AT c202-003
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 8 PID 104100 RUNNING AT c202-003
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 9 PID 104101 RUNNING AT c202-003
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 10 PID 104102 RUNNING AT c202-003
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 11 PID 104103 RUNNING AT c202-003
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 12 PID 104104 RUNNING AT c202-003
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 13 PID 104105 RUNNING AT c202-003
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 14 PID 104106 RUNNING AT c202-003
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 15 PID 104107 RUNNING AT c202-003
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 16 PID 104108 RUNNING AT c202-003
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 17 PID 104109 RUNNING AT c202-003
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 18 PID 104110 RUNNING AT c202-003
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 19 PID 104111 RUNNING AT c202-003
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 20 PID 104112 RUNNING AT c202-003
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 21 PID 104113 RUNNING AT c202-003
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 22 PID 104114 RUNNING AT c202-003
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 23 PID 104115 RUNNING AT c202-003
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 24 PID 104116 RUNNING AT c202-003
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 25 PID 104117 RUNNING AT c202-003
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 26 PID 104118 RUNNING AT c202-003
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 27 PID 104119 RUNNING AT c202-003
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 28 PID 104120 RUNNING AT c202-003
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 29 PID 104121 RUNNING AT c202-003
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 30 PID 104122 RUNNING AT c202-003
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 31 PID 104123 RUNNING AT c202-003
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 32 PID 104124 RUNNING AT c202-003
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 33 PID 104125 RUNNING AT c202-003
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 34 PID 104126 RUNNING AT c202-003
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 35 PID 104127 RUNNING AT c202-003
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 36 PID 104128 RUNNING AT c202-003
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 37 PID 104129 RUNNING AT c202-003
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 38 PID 104130 RUNNING AT c202-003
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 39 PID 104131 RUNNING AT c202-003
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 40 PID 104132 RUNNING AT c202-003
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 41 PID 104133 RUNNING AT c202-003
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 42 PID 104134 RUNNING AT c202-003
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 43 PID 104135 RUNNING AT c202-003
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 44 PID 104136 RUNNING AT c202-003
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 45 PID 104137 RUNNING AT c202-003
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 46 PID 104138 RUNNING AT c202-003
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 47 PID 104139 RUNNING AT c202-003
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 48 PID 104140 RUNNING AT c202-003
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 49 PID 104141 RUNNING AT c202-003
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 50 PID 104142 RUNNING AT c202-003
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 51 PID 104143 RUNNING AT c202-003
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 52 PID 104144 RUNNING AT c202-003
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 53 PID 104145 RUNNING AT c202-003
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 54 PID 104146 RUNNING AT c202-003
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 55 PID 104147 RUNNING AT c202-003
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================

@@ -1,0 +1,755 @@
+TACC:  Starting up job 3211821 
+TACC:  Starting parallel tasks... 
+ MPI_THREAD_SINGLE initialized.
+ 
+*****************************************************
+***** This is GENE 11 (release 2.1 - alpha 0) *******
+***** GIT branch hash: 460ebaf                *******
+***** GIT master hash: 26ff573                *******
+*****************************************************
+ 
+Memory page size on this system is       4096 bytes.
+We have  56 MPI processes per node.
+We have    1792 MPI tasks.
+Could not read the instantiations namelist in parameters. -- Use the defaults.
+WARNING: no dpdx_term treatment defined!!
+         Setting dpdx_term = 'full_drift' ... 
+Signs for magnetic field (1=clockwise, -1=counter-clockwise): B_t:  1, I_p:  1
+with collisions
+Using 1D fftw3 transforms
+
+Using the optimizer: optimizer_t                             
+
+Using a maximum of     3400.00 MB per core.
+Using profile and geometry input to compute rhostar. Result:  2.44103E-03 = 1 / 409.662
+ 
+Choice for parallelization:    1   2   4   1   4  56
+Choice for alternative routines:  1 1 1 2 1 1 1 1 1
+Choice for number of blocks:    24
+Time for chosen settings:  1.7977+308
+using BLAS routines for (i,j) loops: yes
+ 
+CPU memory usage of       autoparallelization is      9.5156MB, rss=            130.0312MB
+ timescheme_o is of type eRK_standard_t                          
+*************************************************************
+Starting time step computation with PETSC-3.14.4/SLEPc-3.14.1
+*************************************************************
+selecting   3  ky modes
+
+Constructing rhs for perf_vec = 111211111
+dgdxy_term is of type dgdxy_ff1_t                             
+dfielddxy_term is of type dchidxy_ff1_t                           
+dzv_term is of type dzv_1_r_t                               
+dchidz_term is of type dchidz_ff_t                             
+dfdxy_term is of type dfdxy_ff_t                              
+collisions_o is of type collisions_landau_t                     
+collisions_o%testpart_computer is of type testpart_computer_landau_2_t            
+collisions_o%fieldpart_computer is of type fieldpart_computer_landau_2_t           
+Ions are adiabatic
+Type of field_solver is fieldsolver_ff_t                        
+Type of fields_general is emfields_t                              
+Type of dfb_f is dist_func_block_t                       
+Type of dfb_h is dist_func_block_t                       
+CPU memory usage of             rhs construct is      0.0312MB, rss=            132.7383MB
+
+END constructing rhs for perf_vec = 111211111
+Using PETSc version 3.14.4-p00
+
+-------------------------------------------------------
+---- Initializing CalFullRhs                       ----
+-------------------------------------------------------
+
+hypv is of type hypv_h_ijl_t                            
+CPU memory usage of     initialize_CalFullRhs is      1.8750MB, rss=            134.8242MB
+Ions are adiabatic
+EV solver/preconditioner: none / none
+using   -2 test vectors with length  54835200, i.e.-1673.44MB
+precision:   0.1000E-03
+CPU memory usage of       finalize_CalFullRhs is      0.0312MB, rss=            149.0898MB
+Using radial coordinate with dx/dr =   1.0000E+00
+Setting C_xy =   1.0000E+00 C_y =   2.1091E-01 C_x' =   4.7415E+00
+B_unit/Bref conversion factor =   2.8056E+00
+dPsi/dr =   2.1091E-01
+ffprime =   1.0974E+00
+n0 for parallel boundary condition:   1744
+info: dpdx_pm from geometry:     1.031567
+N for parallel boundary condition: 267
+single precision computation
+parallel direction: 4th order Arakawa scheme
+=========== hyper diffusion ============
+prefactor for z-hyperdiffusion is scaled with dz
+hyp_z =     -5.000
+no explicit parallel velocity damping
+ 
+recurrence times for the different species:
+electrons    :    0.57440
+
+Constructing rhs for perf_vec = 111211111
+dgdxy_term is of type dgdxy_ff1_t                             
+dfielddxy_term is of type dchidxy_ff1_t                           
+dzv_term is of type dzv_1_r_t                               
+dchidz_term is of type dchidz_ff_t                             
+dfdxy_term is of type dfdxy_ff_t                              
+collisions_o is of type collisions_landau_t                     
+collisions_o%testpart_computer is of type testpart_computer_landau_2_t            
+collisions_o%fieldpart_computer is of type fieldpart_computer_landau_2_t           
+Ions are adiabatic
+Type of field_solver is fieldsolver_ff_t                        
+Type of fields_general is emfields_t                              
+Type of dfb_f is dist_func_block_t                       
+Type of dfb_h is dist_func_block_t                       
+CPU memory usage of             rhs construct is      0.0000MB, rss=            149.1797MB
+
+END constructing rhs for perf_vec = 111211111
+Using PETSc version 3.14.4-p00
+
+-------------------------------------------------------
+---- Initializing CalFullRhs                       ----
+-------------------------------------------------------
+
+hypv is of type hypv_h_ijl_t                            
+CPU memory usage of     initialize_CalFullRhs is      0.0000MB, rss=            149.1797MB
+Ions are adiabatic
+CPU memory usage of       finalize_CalFullRhs is      0.0000MB, rss=            167.9805MB
+Using radial coordinate with dx/dr =   1.0000E+00
+Setting C_xy =   1.0000E+00 C_y =   2.1091E-01 C_x' =   4.7415E+00
+B_unit/Bref conversion factor =   2.8056E+00
+dPsi/dr =   2.1091E-01
+ffprime =   1.0974E+00
+n0 for parallel boundary condition:   1744
+info: dpdx_pm from geometry:     1.031567
+N for parallel boundary condition: 267
+single precision computation
+parallel direction: 4th order Arakawa scheme
+=========== hyper diffusion ============
+prefactor for z-hyperdiffusion is scaled with dz
+hyp_z =     -5.000
+no explicit parallel velocity damping
+ 
+recurrence times for the different species:
+electrons    :    0.57440
+
+Constructing rhs for perf_vec = 111211111
+dgdxy_term is of type dgdxy_ff1_t                             
+dfielddxy_term is of type dchidxy_ff1_t                           
+dzv_term is of type dzv_1_r_t                               
+dchidz_term is of type dchidz_ff_t                             
+dfdxy_term is of type dfdxy_ff_t                              
+collisions_o is of type collisions_landau_t                     
+collisions_o%testpart_computer is of type testpart_computer_landau_2_t            
+collisions_o%fieldpart_computer is of type fieldpart_computer_landau_2_t           
+Ions are adiabatic
+Type of field_solver is fieldsolver_ff_t                        
+Type of fields_general is emfields_t                              
+Type of dfb_f is dist_func_block_t                       
+Type of dfb_h is dist_func_block_t                       
+CPU memory usage of             rhs construct is      0.0000MB, rss=            167.9805MB
+
+END constructing rhs for perf_vec = 111211111
+Using PETSc version 3.14.4-p00
+
+-------------------------------------------------------
+---- Initializing CalFullRhs                       ----
+-------------------------------------------------------
+
+hypv is of type hypv_h_ijl_t                            
+CPU memory usage of     initialize_CalFullRhs is      0.0156MB, rss=            167.9961MB
+Ions are adiabatic
+CPU memory usage of       finalize_CalFullRhs is      0.0000MB, rss=            168.2891MB
+4th order Runge-Kutta
+time step limit set to  6.020E-05
+testing time step limit without hypz_compensation:
+Using radial coordinate with dx/dr =   1.0000E+00
+Setting C_xy =   1.0000E+00 C_y =   2.1091E-01 C_x' =   4.7415E+00
+B_unit/Bref conversion factor =   2.8056E+00
+dPsi/dr =   2.1091E-01
+ffprime =   1.0974E+00
+n0 for parallel boundary condition:   1744
+info: dpdx_pm from geometry:     1.031567
+N for parallel boundary condition: 267
+single precision computation
+parallel direction: 4th order Arakawa scheme
+=========== hyper diffusion ============
+prefactor for z-hyperdiffusion is scaled with dz
+hyp_z =     -5.000
+no explicit parallel velocity damping
+ 
+recurrence times for the different species:
+electrons    :    0.57440
+
+Constructing rhs for perf_vec = 111211111
+dgdxy_term is of type dgdxy_ff1_t                             
+dfielddxy_term is of type dchidxy_ff1_t                           
+dzv_term is of type dzv_1_r_t                               
+dchidz_term is of type dchidz_ff_t                             
+dfdxy_term is of type dfdxy_ff_t                              
+collisions_o is of type collisions_landau_t                     
+collisions_o%testpart_computer is of type testpart_computer_landau_2_t            
+collisions_o%fieldpart_computer is of type fieldpart_computer_landau_2_t           
+Ions are adiabatic
+Type of field_solver is fieldsolver_ff_t                        
+Type of fields_general is emfields_t                              
+Type of dfb_f is dist_func_block_t                       
+Type of dfb_h is dist_func_block_t                       
+CPU memory usage of             rhs construct is      0.0000MB, rss=            168.3242MB
+
+END constructing rhs for perf_vec = 111211111
+Using PETSc version 3.14.4-p00
+
+-------------------------------------------------------
+---- Initializing CalFullRhs                       ----
+-------------------------------------------------------
+
+hypv is of type hypv_h_ijl_t                            
+CPU memory usage of     initialize_CalFullRhs is      0.0000MB, rss=            168.3242MB
+Ions are adiabatic
+   ***no eigenvalues computed for ky=   0.000    !!***
+  number of ev iterations:    12
+CPU memory usage of       finalize_CalFullRhs is      0.1875MB, rss=            169.4180MB
+Using radial coordinate with dx/dr =   1.0000E+00
+Setting C_xy =   1.0000E+00 C_y =   2.1091E-01 C_x' =   4.7415E+00
+B_unit/Bref conversion factor =   2.8056E+00
+dPsi/dr =   2.1091E-01
+ffprime =   1.0974E+00
+n0 for parallel boundary condition:   1744
+info: dpdx_pm from geometry:     1.031567
+N for parallel boundary condition: 267
+single precision computation
+parallel direction: 4th order Arakawa scheme
+=========== hyper diffusion ============
+prefactor for z-hyperdiffusion is scaled with dz
+hyp_z =     -5.000
+no explicit parallel velocity damping
+ 
+recurrence times for the different species:
+electrons    :    0.57440
+
+Constructing rhs for perf_vec = 111211111
+dgdxy_term is of type dgdxy_ff1_t                             
+dfielddxy_term is of type dchidxy_ff1_t                           
+dzv_term is of type dzv_1_r_t                               
+dchidz_term is of type dchidz_ff_t                             
+dfdxy_term is of type dfdxy_ff_t                              
+collisions_o is of type collisions_landau_t                     
+collisions_o%testpart_computer is of type testpart_computer_landau_2_t            
+collisions_o%fieldpart_computer is of type fieldpart_computer_landau_2_t           
+Ions are adiabatic
+Type of field_solver is fieldsolver_ff_t                        
+Type of fields_general is emfields_t                              
+Type of dfb_f is dist_func_block_t                       
+Type of dfb_h is dist_func_block_t                       
+CPU memory usage of             rhs construct is      0.0000MB, rss=            169.4180MB
+
+END constructing rhs for perf_vec = 111211111
+Using PETSc version 3.14.4-p00
+
+-------------------------------------------------------
+---- Initializing CalFullRhs                       ----
+-------------------------------------------------------
+
+hypv is of type hypv_h_ijl_t                            
+CPU memory usage of     initialize_CalFullRhs is      0.0000MB, rss=            169.4180MB
+Ions are adiabatic
+   ***no eigenvalues computed for ky=   7.001    !!***
+  number of ev iterations:    12
+CPU memory usage of       finalize_CalFullRhs is      0.0586MB, rss=            184.5039MB
+Using radial coordinate with dx/dr =   1.0000E+00
+Setting C_xy =   1.0000E+00 C_y =   2.1091E-01 C_x' =   4.7415E+00
+B_unit/Bref conversion factor =   2.8056E+00
+dPsi/dr =   2.1091E-01
+ffprime =   1.0974E+00
+n0 for parallel boundary condition:   1744
+info: dpdx_pm from geometry:     1.031567
+N for parallel boundary condition: 267
+single precision computation
+parallel direction: 4th order Arakawa scheme
+=========== hyper diffusion ============
+prefactor for z-hyperdiffusion is scaled with dz
+hyp_z =     -5.000
+no explicit parallel velocity damping
+ 
+recurrence times for the different species:
+electrons    :    0.57440
+
+Constructing rhs for perf_vec = 111211111
+dgdxy_term is of type dgdxy_ff1_t                             
+dfielddxy_term is of type dchidxy_ff1_t                           
+dzv_term is of type dzv_1_r_t                               
+dchidz_term is of type dchidz_ff_t                             
+dfdxy_term is of type dfdxy_ff_t                              
+collisions_o is of type collisions_landau_t                     
+collisions_o%testpart_computer is of type testpart_computer_landau_2_t            
+collisions_o%fieldpart_computer is of type fieldpart_computer_landau_2_t           
+Ions are adiabatic
+Type of field_solver is fieldsolver_ff_t                        
+Type of fields_general is emfields_t                              
+Type of dfb_f is dist_func_block_t                       
+Type of dfb_h is dist_func_block_t                       
+CPU memory usage of             rhs construct is      0.0000MB, rss=            184.5039MB
+
+END constructing rhs for perf_vec = 111211111
+Using PETSc version 3.14.4-p00
+
+-------------------------------------------------------
+---- Initializing CalFullRhs                       ----
+-------------------------------------------------------
+
+hypv is of type hypv_h_ijl_t                            
+CPU memory usage of     initialize_CalFullRhs is      0.0000MB, rss=            184.5039MB
+Ions are adiabatic
+   ***no eigenvalues computed for ky=   161.0    !!***
+  number of ev iterations:    12
+CPU memory usage of       finalize_CalFullRhs is      0.1484MB, rss=            184.6523MB
+  no additional restriction due to small real eigenvalue found.
+  not using hyp_z compensation.
+testing time step limit for collision scheme:
+Using radial coordinate with dx/dr =   1.0000E+00
+Setting C_xy =   1.0000E+00 C_y =   2.1091E-01 C_x' =   4.7415E+00
+B_unit/Bref conversion factor =   2.8056E+00
+dPsi/dr =   2.1091E-01
+ffprime =   1.0974E+00
+n0 for parallel boundary condition:   1744
+info: dpdx_pm from geometry:     1.031567
+N for parallel boundary condition: 267
+single precision computation
+parallel direction: 4th order Arakawa scheme
+=========== hyper diffusion ============
+prefactor for z-hyperdiffusion is scaled with dz
+hyp_z =     -5.000
+no explicit parallel velocity damping
+ 
+recurrence times for the different species:
+electrons    :    0.57440
+
+Constructing rhs for perf_vec = 111211111
+dgdxy_term is of type dgdxy_ff1_t                             
+dfielddxy_term is of type dchidxy_ff1_t                           
+dzv_term is of type dzv_1_r_t                               
+dchidz_term is of type dchidz_ff_t                             
+dfdxy_term is of type dfdxy_ff_t                              
+collisions_o is of type collisions_landau_t                     
+collisions_o%testpart_computer is of type testpart_computer_landau_2_t            
+collisions_o%fieldpart_computer is of type fieldpart_computer_landau_2_t           
+Ions are adiabatic
+Type of field_solver is fieldsolver_ff_t                        
+Type of fields_general is emfields_t                              
+Type of dfb_f is dist_func_block_t                       
+Type of dfb_h is dist_func_block_t                       
+CPU memory usage of             rhs construct is      0.0000MB, rss=            184.6523MB
+
+END constructing rhs for perf_vec = 111211111
+Using PETSc version 3.14.4-p00
+
+-------------------------------------------------------
+---- Initializing CalFullRhs                       ----
+-------------------------------------------------------
+
+hypv is of type hypv_h_ijl_t                            
+CPU memory usage of     initialize_CalFullRhs is      0.0000MB, rss=            184.6523MB
+Ions are adiabatic
+CPU memory usage of       finalize_CalFullRhs is      0.0000MB, rss=            184.9297MB
+  RKC1 : time step limit is  3.380E-04
+  RKC2 : time step limit is  1.320E-03
+  RKC3 : time step limit is  2.960E-03
+  RKC4 : time step limit is  4.480E-03
+  adaptive coll_split_scheme: we chose RKC1
+dt_max =    6.020E-05 found with SLEPc
+calculated    4 eigenvectors
+time for computation of dt_max:    39.190 sec
+******************************************************
+initialize the parallelization (xyzvws):    1   4  56   2   4   1
+and the perf_vec=111211111
+Using radial coordinate with dx/dr =   1.0000E+00
+Setting C_xy =   1.0000E+00 C_y =   2.1091E-01 C_x' =   4.7415E+00
+B_unit/Bref conversion factor =   2.8056E+00
+dPsi/dr =   2.1091E-01
+ffprime =   1.0974E+00
+n0 for parallel boundary condition:   1744
+info: dpdx_pm from geometry:     1.031567
+N for parallel boundary condition: 267
+single precision computation
+parallel direction: 4th order Arakawa scheme
+=========== hyper diffusion ============
+prefactor for z-hyperdiffusion is scaled with dz
+hyp_z =     -5.000
+no explicit parallel velocity damping
+ 
+recurrence times for the different species:
+electrons    :    0.57440
+ timescheme_o is of type eRK_standard_t                          
+
+Constructing rhs for perf_vec = 111211111
+dgdxy_term is of type dgdxy_ff1_t                             
+dfielddxy_term is of type dchidxy_ff1_t                           
+dzv_term is of type dzv_1_r_t                               
+dchidz_term is of type dchidz_ff_t                             
+dfdxy_term is of type dfdxy_ff_t                              
+nonlinear_term is of type ff_nonlinear_term_t                     
+collisions_o is of type collisions_landau_t                     
+collisions_o%testpart_computer is of type testpart_computer_landau_2_t            
+collisions_o%fieldpart_computer is of type fieldpart_computer_landau_2_t           
+Ions are adiabatic
+Type of field_solver is fieldsolver_ff_t                        
+Type of fields_general is emfields_t                              
+Type of dfb_f is dist_func_block_t                       
+Type of dfb_h is dist_func_block_t                       
+CPU memory usage of             rhs construct is      0.0938MB, rss=            185.7188MB
+
+END constructing rhs for perf_vec = 111211111
+
+-------------------------------------------------------
+---- Initializing CalFullRhs                       ----
+-------------------------------------------------------
+
+nonlinear type is ff_nonlinear_term_t                      with a blocksize of       20
+hypv is of type hypv_h_ijl_t                            
+CPU memory usage of     initialize_CalFullRhs is     20.3789MB, rss=            206.1445MB
+Ions are adiabatic
+nonlinear computation
+reading SINGLE precision checkpoint  /scratch1/02910/ionut/DIIID_Nature_CS/nonlin/out_prob_4_more_res//checkpoint
+Time for checkpoint_in:     4.028 sec
+CPU memory usage of            initialization is     90.9844MB, rss=            275.9609MB
+CPU memory usage of      initialize_all_diags is      0.4766MB, rss=            276.4375MB
+CPU memory usage of                 GPU_usage is      0.0430MB, rss=            276.4805MB
+Time for s_checkpoint out:     4.584 sec
+CPU memory usage of            exec_all_diags is    152.1562MB, rss=            428.6367MB
+ 
+*** entering time loop ***
+maximal     300000 timesteps.
+Time for s_checkpoint out:     4.864 sec
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 0 PID 270148 RUNNING AT c202-012
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 1 PID 270149 RUNNING AT c202-012
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 2 PID 270150 RUNNING AT c202-012
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 3 PID 270151 RUNNING AT c202-012
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 4 PID 270152 RUNNING AT c202-012
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 5 PID 270153 RUNNING AT c202-012
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 6 PID 270154 RUNNING AT c202-012
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 7 PID 270155 RUNNING AT c202-012
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 8 PID 270156 RUNNING AT c202-012
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 9 PID 270157 RUNNING AT c202-012
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 10 PID 270158 RUNNING AT c202-012
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 11 PID 270159 RUNNING AT c202-012
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 12 PID 270160 RUNNING AT c202-012
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 13 PID 270161 RUNNING AT c202-012
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 14 PID 270162 RUNNING AT c202-012
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 15 PID 270163 RUNNING AT c202-012
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 16 PID 270164 RUNNING AT c202-012
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 17 PID 270165 RUNNING AT c202-012
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 18 PID 270166 RUNNING AT c202-012
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 19 PID 270167 RUNNING AT c202-012
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 20 PID 270168 RUNNING AT c202-012
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 21 PID 270169 RUNNING AT c202-012
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 22 PID 270170 RUNNING AT c202-012
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 23 PID 270171 RUNNING AT c202-012
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 24 PID 270172 RUNNING AT c202-012
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 25 PID 270173 RUNNING AT c202-012
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 26 PID 270174 RUNNING AT c202-012
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 27 PID 270175 RUNNING AT c202-012
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 28 PID 270176 RUNNING AT c202-012
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 29 PID 270177 RUNNING AT c202-012
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 30 PID 270178 RUNNING AT c202-012
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 31 PID 270179 RUNNING AT c202-012
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 32 PID 270180 RUNNING AT c202-012
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 33 PID 270181 RUNNING AT c202-012
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 34 PID 270182 RUNNING AT c202-012
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 35 PID 270183 RUNNING AT c202-012
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 36 PID 270184 RUNNING AT c202-012
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 37 PID 270185 RUNNING AT c202-012
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 38 PID 270186 RUNNING AT c202-012
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 39 PID 270187 RUNNING AT c202-012
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 40 PID 270188 RUNNING AT c202-012
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 41 PID 270189 RUNNING AT c202-012
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 42 PID 270190 RUNNING AT c202-012
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 43 PID 270191 RUNNING AT c202-012
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 44 PID 270192 RUNNING AT c202-012
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 45 PID 270193 RUNNING AT c202-012
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 46 PID 270194 RUNNING AT c202-012
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 47 PID 270195 RUNNING AT c202-012
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 48 PID 270196 RUNNING AT c202-012
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 49 PID 270197 RUNNING AT c202-012
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 50 PID 270198 RUNNING AT c202-012
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 51 PID 270199 RUNNING AT c202-012
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 52 PID 270200 RUNNING AT c202-012
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 53 PID 270201 RUNNING AT c202-012
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 54 PID 270202 RUNNING AT c202-012
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 55 PID 270203 RUNNING AT c202-012
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
