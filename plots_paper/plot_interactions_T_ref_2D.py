@@ -26,7 +26,7 @@ def which_variables(param, multiindex_bin_of_interest):
 		variables.append(vars)
 
 
-	var = '$S_{' + param + ',others}$'
+	var = '$S_{' + param + ', \mathrm{others}}$'
 
 	variables.append(var)
 
@@ -115,7 +115,7 @@ if __name__ == '__main__':
 			  	'\omega_{n_e}', '\omega_{T_e}', \
 			  	'T_{e}', 'n_{e}']
 
-	params = ['$\\tau$', '$Z_{eff}$', '$q$', '$\hat{s}$', '$\omega_{n_e}$', '$\omega_{T_e}$', '$T_{e}$', '$n_{e}$']
+	params = ['$\\tau$', '$Z_{\mathrm{eff}}$', '$q$', '$\hat{s}$', '$\omega_{n_e}$', '$\omega_{T_e}$', '$T_{e}$', '$n_{e}$']
 
 	multiindex_bin 		= np.load('results/multiindex_bin.npy')
 	all_sobol_indices 	= np.load('results/all_Sobol_indices.npy')

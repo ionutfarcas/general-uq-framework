@@ -26,16 +26,20 @@ def draw_arrow(xyA, xyB, ax1, ax2):
 if __name__ == '__main__':
 
     plt.rc("figure", dpi=400)           # High-quality figure ("dots-per-inch")
-    # plt.rc("text", usetex=True)         # Crisp axis ticks
-    plt.rc("font", family="serif")      # Crisp axis labels
-    # plt.rc("legend", edgecolor='none')  # No boxes around legends
-    # plt.rcParams["figure.figsize"] = (6, 3)
+    plt.rcParams.update({
+    "text.usetex": True,
+    "font.family": "sans-serif",
+    "font.sans-serif": "Helvetica"})
+    plt.rc('text.latex', preamble=r'\usepackage{amssymb, bm, upgreek}')
     plt.rcParams.update({'font.size': 6})
+    plt.rcParams["figure.figsize"] = (5, 5)
 
-    bboard = "#323E48" # blackboard slate gray
-    chalk_white = "#DCDCDC"
-    chalk_orange = "#fc9d28"
-    transp = (1,1,1,0)
+
+
+    bboard          = "#323E48" # blackboard slate gray
+    chalk_white     = "#DCDCDC"
+    chalk_orange    = "#fc9d28"
+    transp          = (1,1,1,0)
 
     # white base settings
     plt.rc("figure",facecolor='w')
@@ -79,13 +83,13 @@ if __name__ == '__main__':
    
 
     textstr = 'postprocessing'
-    props   = dict(boxstyle='round', facecolor='tan', alpha=0.5)
+    props   = dict(boxstyle='round', facecolor='wheat', alpha=0.5)
 
-    ax3.text(0.6, 0.5, textstr, transform=ax3.transAxes,
+    ax3.text(0.8, 0.5, textstr, transform=ax3.transAxes,
             verticalalignment='center', bbox=props)
 
     # UQ
-    textstr = 'uncertainty quantification' + '\n' + r'$\mathbb{E}[y_{\mathrm{hi-fi}}], \mathrm{Var}[y_{\mathrm{hi-fi}}], ...$'
+    textstr = 'uncertainty quantification: ' + r'$\mathbb{E}[y_{\mathrm{hi-fi}}], \mathrm{Var}[y_{\mathrm{hi-fi}}], ...$'
     props   = dict(boxstyle='round', facecolor='wheat', alpha=0.5)
 
     ax4.text(0.0, 0.75, textstr, transform=ax4.transAxes,
@@ -96,7 +100,7 @@ if __name__ == '__main__':
     # xyB = [0.1, 0.5]
     # draw_arrow(xyA, xyB, ax2, ax4)
 
-    textstr = 'sensitivity analysis' + '\n' + r'$S_{\theta_1}, S_{\theta_2}, S_{\theta_3}, S_{\theta_1, \theta_2}, ...$'
+    textstr = 'sensitivity analysis: ' + r'$S_{\theta_1}, S_{\theta_2}, S_{\theta_3}, S_{\theta_1, \theta_2}, ...$'
     props   = dict(boxstyle='round', facecolor='wheat', alpha=0.5)
 
     ax4.text(0.00, 0.5, textstr, transform=ax4.transAxes,
@@ -108,7 +112,7 @@ if __name__ == '__main__':
     # xyB = [0.1, 0.30]
     # draw_arrow(xyA, xyB, ax2, ax4)
 
-    textstr = 'reduced model' + '\n' + r'$y_{\mathrm{SG}}(\theta_1, \theta_2, \theta_3)$'
+    textstr = 'sparse grid surrogate model' + r'$y_{\mathrm{SG}}(\boldsymbol{\uptheta})$'
     props   = dict(boxstyle='round', facecolor='lavender', alpha=0.5)
 
     ax4.text(0.00, 0.25, textstr, transform=ax4.transAxes,
@@ -122,7 +126,7 @@ if __name__ == '__main__':
     textstr = 'optimization'
     props   = dict(boxstyle='round', facecolor='lavender', alpha=0.0)
 
-    ax4.text(-0.6, -0.1, textstr, transform=ax4.transAxes,
+    ax4.text(-0.4, 0.0, textstr, transform=ax4.transAxes,
             verticalalignment='center', bbox=props, fontsize=6)
 
 
@@ -133,7 +137,7 @@ if __name__ == '__main__':
     textstr = 'multi-fidelity modeling'
     props   = dict(boxstyle='round', facecolor='lavender', alpha=0.0)
 
-    ax4.text(-0.1, -0.1, textstr, transform=ax4.transAxes,
+    ax4.text(0.1, 0.0, textstr, transform=ax4.transAxes,
             verticalalignment='center', bbox=props, fontsize=6)
 
 
@@ -144,19 +148,20 @@ if __name__ == '__main__':
     textstr = '...'
     props   = dict(boxstyle='round', facecolor='lavender', alpha=0.0)
 
-    ax4.text(0.7, -0.1, textstr, transform=ax4.transAxes,
+    ax4.text(0.9, 0.0, textstr, transform=ax4.transAxes,
             verticalalignment='center', bbox=props, fontsize=6)
 
 
 
    
 
-    # plt.tight_layout()
+    plt.tight_layout()
 
-    plt.show()
+    # plt.show()
 
     # plt.savefig('figures/sens_driven_summary.png', pad_inches=3)
     # plt.close()
 
-    fig_name = 'figures/sens_driven_summary_partIII.pdf'
-    fig.savefig(fig_name, format="pdf", bbox_inches='tight')
+    fig_name = 'figures/sens_driven_summary_partIII.png'
+    fig.savefig(fig_name, bbox_inches='tight')
+    plt.close()

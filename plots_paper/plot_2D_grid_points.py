@@ -47,21 +47,26 @@ left_stoch_boundary_flipped 	= np.flip(left_stoch_boundary)
 right_stoch_boundary_flipped 	= np.flip(right_stoch_boundary)
 
 
-left_bounds 	= np.array([0.35, 3.98, 144, 69, \
-								0.97*left_tau, 1.53, 0.96*left_q0, 0.95*left_shat])
+print(left_stoch_boundary)
+print(right_stoch_boundary)
 
-right_bounds 	= np.array([0.444, 4.98, 227, 107, \
-								1.02*right_tau, 2.415, 1.03*right_q0, 1.05*right_shat])
+
+
+left_bounds 	= np.array([0.97*left_Tref, 0.98*left_nref, 0.96*left_omt, 0.97*left_omn, \
+								0.97*left_tau, 0.96*left_zeff, 0.955*left_q0, 0.97*left_shat])
+
+right_bounds 	= np.array([1.015*right_Tref, 1.01*right_nref, 1.02*right_omt, 1.01*right_omn, \
+								1.025*right_tau, 1.02*right_zeff, 1.03*right_q0, 1.02*right_shat])
 
 left_bounds_flipped 	= np.flip(left_bounds)
 right_bounds_flipped 	= np.flip(right_bounds)
 
 
 
-x_ticks = [[0.35, 0.44], [4.00, 4.95], [145, 225], [70, 105], [1.15, 1.75], [1.55, 2.4], [3.5, 5.5], [4, 6]]
+x_ticks = [[0.35, 0.44], [4.00, 4.95], [145, 225], [70, 105], [1.15, 1.75], [1.55, 2.4], [3.55, 5.5], [4, 6]]
 y_ticks = x_ticks[::-1]
 
-x_ticks_labels = [[0.35, 0.44], ['4.00', 4.95], [145, 225], [70, 105], [1.15, 1.75], [1.55, '2.40'], [3.5, 5.5], [4, 6]]
+x_ticks_labels = [[0.35, 0.44], ['4.00', 4.95], [145, 225], [70, 105], [1.15, 1.75], [1.55, '2.40'], [3.55, '5.50'], [4, 6]]
 y_ticks_labels = x_ticks_labels[::-1]
 
 
@@ -77,7 +82,7 @@ if __name__ == '__main__':
 
 	map_rv = lambda left, right, x: left + (right - left)*x
 
-	params = [r'$T_{e}[keV]$', r'$n_{e}[10^{19}/m^3]$', r'$\omega_{T_e}$', r'$\omega_{n_e}$', r'$\tau$', r'$Z_{\rm eff}$', r'$q$', r'$\hat{s}$']
+	params = [r'$T_{e}[\mathrm{keV}]$', r'$n_{e}[10^{19} \mathrm{m^{-3}}]$', r'$\omega_{T_e}$', r'$\omega_{n_e}$', r'$\tau$', r'$Z_{\rm eff}$', r'$q$', r'$\hat{s}$']
 
 	all_sg_points = np.load('results/all_sg_points.npy')
 	all_sg_points = all_sg_points[:57, :]
@@ -86,8 +91,10 @@ if __name__ == '__main__':
 	sg_points_descend 	= all_sg_points[:, indices_descend]
 
 	rc("figure", dpi=400)           # High-quality figure ("dots-per-inch")
-	rc("text", usetex=True)         # Crisp axis ticks
-	rc("font", family="serif")      # Crisp axis labels
+	rcParams.update({
+    "text.usetex": True,
+    "font.family": "sans-serif",
+    "font.sans-serif": "Helvetica"})
 	rc("legend", edgecolor='none')  # No boxes around legends
 	rcParams["figure.figsize"] = (8, 7)
 	rcParams.update({'font.size': 8})
@@ -123,6 +130,12 @@ if __name__ == '__main__':
 
 			ax.grid(which='major', linestyle='None', linewidth='0.5', color='k')
 			ax.grid(which='minor', linestyle='--', linewidth='0.4', color='k')
+
+			# ax.tick_params(which='both', # Options for both major and minor ticks
+			#                 top='off', # turn off top ticks
+			#                 left='off', # turn off left ticks
+			#                 right='off',  # turn off right ticks
+			#                 bottom='off') # turn off bottom ticks
 
 			temp.append(ax)
 

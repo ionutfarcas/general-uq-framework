@@ -27,8 +27,10 @@ if __name__ == '__main__':
 
 	
 	plt.rc("figure", dpi=400)           # High-quality figure ("dots-per-inch")
-	plt.rc("text", usetex=True)         # Crisp axis ticks
-	plt.rc("font", family="serif")      # Crisp axis labels
+	plt.rcParams.update({
+    "text.usetex": True,
+    "font.family": "sans-serif",
+    "font.sans-serif": "Helvetica"})
 	# plt.rc("legend", edgecolor='none')  # No boxes around legends
 	plt.rcParams["figure.figsize"] = (6, 3)
 	plt.rcParams.update({'font.size': 6})
@@ -66,7 +68,7 @@ if __name__ == '__main__':
 	ax1.plot(ref_evals, sg_evals, linestyle='', marker='o', markersize=1.5, color=color1)
 	ax1.plot(x, x, linestyle='-', lw=0.5, color='gray', alpha=0.7)
 	ax1.set_xlabel('Testing samples: high-fidelity heat flux '  + r'$Q_{\mathrm{hi-fi}} [\mathrm{MW}]$')
-	ax1.set_ylabel('Testing samples: reduced model heat flux '  + r'$Q_{\mathrm{SG}} [\mathrm{MW}]$')
+	ax1.set_ylabel('Testing samples: surrogate model heat flux '  + r'$Q_{\mathrm{SG}} [\mathrm{MW}]$')
 	
 	plt.tight_layout()
 

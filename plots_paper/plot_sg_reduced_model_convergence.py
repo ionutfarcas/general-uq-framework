@@ -53,8 +53,10 @@ if __name__ == '__main__':
 
 	
 	plt.rc("figure", dpi=400)           # High-quality figure ("dots-per-inch")
-	plt.rc("text", usetex=True)         # Crisp axis ticks
-	plt.rc("font", family="serif")      # Crisp axis labels
+	plt.rcParams.update({
+    "text.usetex": True,
+    "font.family": "sans-serif",
+    "font.sans-serif": "Helvetica"})
 	# plt.rc("legend", edgecolor='none')  # No boxes around legends
 	plt.rcParams["figure.figsize"] = (6, 3)
 	plt.rcParams.update({'font.size': 6})
@@ -74,9 +76,8 @@ if __name__ == '__main__':
 
 	# line settings for white base
 	charcoal    = [0.1, 0.1, 0.1]
-	color1      = '#AD4229'
+	color1      = '#d95f02'
 	color2      = '#1251BF'
-	color3      = '#E19500'
 
 	fig 	= plt.figure()
 	ax1 	= fig.add_subplot(111)
@@ -92,15 +93,15 @@ if __name__ == '__main__':
 	# ax2.yaxis.set_ticks_position('left')
 	# ax2.xaxis.set_ticks_position('bottom')
 
-	ax1.semilogy(n, ref_evals[indices_to_plot[0]] * np.ones(len(n)), linestyle='-', lw=0.75, color=charcoal)
-	ax1.semilogy(n, ref_evals[indices_to_plot[1]] * np.ones(len(n)), linestyle='-', lw=0.75, color=charcoal)
-	ax1.semilogy(n, ref_evals[indices_to_plot[2]] * np.ones(len(n)), linestyle='-', lw=0.75, color=charcoal)
-	ax1.semilogy(n, ref_evals[indices_to_plot[3]] * np.ones(len(n)), linestyle='-', lw=0.75, color=charcoal)
+	ax1.semilogy(n, ref_evals[indices_to_plot[0]] * np.ones(len(n)), linestyle='-', lw=0.75, color=color1)
+	ax1.semilogy(n, ref_evals[indices_to_plot[1]] * np.ones(len(n)), linestyle='-', lw=0.75, color=color1)
+	ax1.semilogy(n, ref_evals[indices_to_plot[2]] * np.ones(len(n)), linestyle='-', lw=0.75, color=color1)
+	ax1.semilogy(n, ref_evals[indices_to_plot[3]] * np.ones(len(n)), linestyle='-', lw=0.75, color=color1)
 
-	ax1.semilogy(n, sg_results_1, linestyle='--', lw=0.75, marker='o', markersize=2, color=color3)
-	ax1.semilogy(n, sg_results_2, linestyle='--', lw=0.75, marker='o', markersize=2, color=color3)
-	ax1.semilogy(n, sg_results_3, linestyle='--', lw=0.75, marker='o', markersize=2, color=color3)
-	ax1.semilogy(n, sg_results_4, linestyle='--', lw=0.75, marker='o', markersize=2, color=color3)
+	ax1.semilogy(n, sg_results_1, linestyle='--', lw=0.75, marker='o', markersize=2, color=color2)
+	ax1.semilogy(n, sg_results_2, linestyle='--', lw=0.75, marker='o', markersize=2, color=color2)
+	ax1.semilogy(n, sg_results_3, linestyle='--', lw=0.75, marker='o', markersize=2, color=color2)
+	ax1.semilogy(n, sg_results_4, linestyle='--', lw=0.75, marker='o', markersize=2, color=color2)
 	
 
 	ax1.text(50, 0.85*ref_evals[indices_to_plot[0]], 'Sample 32')
@@ -108,7 +109,7 @@ if __name__ == '__main__':
 	ax1.text(50, 0.85*ref_evals[indices_to_plot[2]], 'Sample 12')
 	ax1.text(50, 0.85*ref_evals[indices_to_plot[3]], 'Sample 28')
 	
-	ax1.set_xlabel('Number of sparse grid points to construct the interpolation-based reduced model')
+	ax1.set_xlabel('Number of sparse grid points to construct the interpolation-based surrogate model')
 	# ax1.set_xlabel('Number of sparse grid points')
 	ax1.set_ylabel('Heat flux '  + r'$Q [\mathrm{MW}]$')
 

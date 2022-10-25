@@ -26,11 +26,13 @@ def draw_arrow(xyA, xyB, ax1, ax2):
 if __name__ == '__main__':
 
     plt.rc("figure", dpi=400)           # High-quality figure ("dots-per-inch")
-    # plt.rc("text", usetex=True)         # Crisp axis ticks
-    plt.rc("font", family="serif")      # Crisp axis labels
-    # plt.rc("legend", edgecolor='none')  # No boxes around legends
-    # plt.rcParams["figure.figsize"] = (8, 6)
-    plt.rcParams.update({'font.size': 6})
+    plt.rcParams.update({
+    "text.usetex": True,
+    "font.family": "sans-serif",
+    "font.sans-serif": "Helvetica"})
+    plt.rc('text.latex', preamble=r'\usepackage{amssymb, bm, upgreek}')
+    plt.rcParams.update({'font.size': 8})
+    plt.rcParams["figure.figsize"] = (5, 5)
 
     bboard = "#323E48" # blackboard slate gray
     chalk_white = "#DCDCDC"
@@ -92,26 +94,26 @@ if __name__ == '__main__':
 
     
     # hi-fi model
-    textstr = 'perform high-fidelity simulation ' + '\n' + r'$f_{\mathrm{hi-fi}}(\theta_{19,1}; \theta_{19,2}; \theta_{19,3})$'
+    textstr = 'perform high-fidelity simulation ' + r'$f_{\mathrm{hi-fi}}(\boldsymbol{\uptheta}_{n + 1})$'
     props   = dict(boxstyle='round', facecolor=color3, alpha=0.4)
 
-    ax1.text(0.45, 0.8, textstr, transform=ax1.transAxes,
-            verticalalignment='center', bbox=props, fontsize=5)
+    ax1.text(0.05, 0.8, textstr, transform=ax1.transAxes,
+            verticalalignment='center', bbox=props)
 
 
     # hi-fi model
-    textstr = 'perform high-fidelity simulation ' + '\n' + r'$f_{\mathrm{hi-fi}}(\theta_{20,1}; \theta_{20,2}; \theta_{20,3})$'
+    textstr = 'perform high-fidelity simulation '  + r'$f_{\mathrm{hi-fi}}(\boldsymbol{\uptheta}_{n + 2})$'
     props   = dict(boxstyle='round', facecolor=color3, alpha=0.4)
 
-    ax1.text(0.45, 0.5, textstr, transform=ax1.transAxes,
-            verticalalignment='center', bbox=props, fontsize=5)
+    ax1.text(0.05, 0.5, textstr, transform=ax1.transAxes,
+            verticalalignment='center', bbox=props)
 
     # hi-fi model
-    textstr = 'perform high-fidelity simulation ' + '\n' + r'$f_{\mathrm{hi-fi}}(\theta_{21,1}; \theta_{21,2}; \theta_{21,3})$'
+    textstr = 'perform high-fidelity simulation '  + r'$f_{\mathrm{hi-fi}}(\boldsymbol{\uptheta}_{n + 3})$'
     props   = dict(boxstyle='round', facecolor=color3, alpha=0.4)
 
-    ax1.text(0.45, 0.2, textstr, transform=ax1.transAxes,
-            verticalalignment='center', bbox=props, fontsize=5)
+    ax1.text(0.05, 0.2, textstr, transform=ax1.transAxes,
+            verticalalignment='center', bbox=props)
 
     # arrow hi-fi model -> UQ
     # xyA = [0.90, 0.5]
@@ -120,23 +122,23 @@ if __name__ == '__main__':
     
     # hi-fi model
 
-    textstr = 'compute output of interest ' + '\n' + r'$y_{\mathrm{hi-fi}}(\theta_{19,1}; \theta_{19,2}; \theta_{19,3})$'
-    props   = dict(boxstyle='round', facecolor='mistyrose', alpha=0.5)
+    textstr = 'compute output of interest ' + r'$y_{\mathrm{hi-fi}}(\boldsymbol{\uptheta}_{n + 1})$'
+    props   = dict(boxstyle='round', facecolor=color3, alpha=0.4)
 
     ax2.text(0.3, 0.8, textstr, transform=ax2.transAxes,
-            verticalalignment='center', bbox=props, fontsize=5)
+            verticalalignment='center', bbox=props)
 
-    textstr = 'compute output of interest ' + '\n' + r'$y_{\mathrm{hi-fi}}(\theta_{20,1}; \theta_{20,2}; \theta_{20,3})$'
-    props   = dict(boxstyle='round', facecolor='mistyrose', alpha=0.5)
+    textstr = 'compute output of interest ' + r'$y_{\mathrm{hi-fi}}(\boldsymbol{\uptheta}_{n + 2})$'
+    props   = dict(boxstyle='round', facecolor=color3, alpha=0.4)
 
     ax2.text(0.3, 0.5, textstr, transform=ax2.transAxes,
-            verticalalignment='center', bbox=props, fontsize=5)
+            verticalalignment='center', bbox=props)
 
-    textstr = 'compute output of interest ' + '\n' + r'$y_{\mathrm{hi-fi}}(\theta_{21,1}; \theta_{21,2}; \theta_{21,3})$'
-    props   = dict(boxstyle='round', facecolor='mistyrose', alpha=0.5)
+    textstr = 'compute output of interest ' + r'$y_{\mathrm{hi-fi}}(\boldsymbol{\uptheta}_{n + 3})$'
+    props   = dict(boxstyle='round', facecolor=color3, alpha=0.4)
 
     ax2.text(0.3, 0.2, textstr, transform=ax2.transAxes,
-            verticalalignment='center', bbox=props, fontsize=5)
+            verticalalignment='center', bbox=props)
 
     ####
     
@@ -149,12 +151,13 @@ if __name__ == '__main__':
     
  
 
-    # plt.tight_layout()
+    plt.tight_layout()
 
-    plt.show()
+    # plt.show()
 
     # plt.savefig('figures/sens_driven_summary.png', pad_inches=3)
     # plt.close()
 
-    fig_name = 'figures/sens_driven_summary_partI.pdf'
-    fig.savefig(fig_name, format="pdf", bbox_inches='tight')
+    fig_name = 'figures/sens_driven_summary_partI.png'
+    fig.savefig(fig_name, bbox_inches='tight')
+    plt.close()

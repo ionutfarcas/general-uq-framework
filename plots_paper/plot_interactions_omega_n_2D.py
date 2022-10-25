@@ -16,7 +16,7 @@ def which_variables(param, multiindex_bin_of_interest):
 		for i, m in enumerate(multiindex):
 			if m:
 				indices += params_x[i]
-				indices += ','
+				indices += ', '
 
 		indices = indices[:-1]
 
@@ -26,7 +26,7 @@ def which_variables(param, multiindex_bin_of_interest):
 		variables.append(vars)
 
 
-	var = '$S_{' + param + ',others}$'
+	var = '$S_{' + param  + ', \mathrm{ others}}$'
 
 	variables.append(var)
 
@@ -69,7 +69,7 @@ if __name__ == '__main__':
 
 	fig 	= figure()
 	ax 		= fig.add_subplot(111)
-
+	
 	rcParams['lines.linewidth'] = 0
 	rc("figure", dpi=400)           # High-quality figure ("dots-per-inch")
 	# rc("text", usetex=True)         # Crisp axis ticks
@@ -115,7 +115,7 @@ if __name__ == '__main__':
 			  	'\omega_{n_e}', '\omega_{T_e}', \
 			  	'T_{e}', 'n_{e}']
 
-	params = ['$\\tau$', '$Z_{eff}$', '$q$', '$\hat{s}$', '$\omega_{n_e}$', '$\omega_{T_e}$', '$T_{e}$', '$n_{e}$']
+	params = ['$\\tau$', '$Z_{\mathrm{eff}}$', '$q$', '$\hat{s}$', '$\omega_{n_e}$', '$\omega_{T_e}$', '$T_{e}$', '$n_{e}$']
 
 	multiindex_bin 		= np.load('results/multiindex_bin.npy')
 	all_sobol_indices 	= np.load('results/all_Sobol_indices.npy')
@@ -139,6 +139,9 @@ if __name__ == '__main__':
 		sobol_indices_of_interest[x] 	= sobol_indices_divided[target_dim][x]
 
 	sobol_indices_of_interest[-1] = np.sum(all_sobol_indices[bin_indices_perp[target_dim]])
+
+	# print(variables)
+	# print(sobol_indices_of_interest)
 
 	sobol_indices_of_interest = sobol_indices_of_interest[1:]
 	variables = variables[1:]

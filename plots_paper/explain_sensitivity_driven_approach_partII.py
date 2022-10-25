@@ -6,11 +6,13 @@ import numpy as np
 if __name__ == '__main__':
 
     plt.rc("figure", dpi=400)           # High-quality figure ("dots-per-inch")
-    # plt.rc("text", usetex=True)         # Crisp axis ticks
-    plt.rc("font", family="serif")      # Crisp axis labels
-    # plt.rc("legend", edgecolor='none')  # No boxes around legends
-    # plt.rcParams["figure.figsize"] = (8, 6)
-    plt.rcParams.update({'font.size': 6})
+    plt.rcParams.update({
+    "text.usetex": True,
+    "font.family": "sans-serif",
+    "font.sans-serif": "Helvetica"})
+    plt.rc('text.latex', preamble=r'\usepackage{amssymb, bm, upgreek}')
+    plt.rcParams.update({'font.size': 8})
+    plt.rcParams["figure.figsize"] = (3, 3)
 
     bboard = "#323E48" # blackboard slate gray
     chalk_white = "#DCDCDC"
@@ -47,10 +49,10 @@ if __name__ == '__main__':
 
  
     # hi-fi model
-    textstr = 'continue refinement?'
+    textstr = 'continue adaptive refinement?'
     props   = dict(boxstyle='round', facecolor='coral', alpha=0.5)
 
-    ax1.text(0.1, 0.4, textstr, transform=ax1.transAxes,
+    ax1.text(0.03, 0.4, textstr, transform=ax1.transAxes,
             verticalalignment='center', bbox=props, fontsize=5)
 
   
@@ -59,15 +61,16 @@ if __name__ == '__main__':
     textstr = 'compute sensitivity scores'
     props   = dict(boxstyle='round', facecolor='tan', alpha=0.5)
 
-    ax1.text(0.05, 0.25, textstr, transform=ax1.transAxes,
+    ax1.text(0.05, 0.28, textstr, transform=ax1.transAxes,
             verticalalignment='center', bbox=props, fontsize=5)
     
-    # plt.tight_layout()
+    plt.tight_layout()
 
-    plt.show()
+   # plt.show()
 
-    # plt.savefig('figures/sens_driven_summary.png', pad_inches=3)
-    # plt.close()
+ #   plt.savefig('figures/sens_driven_summary.png', pad_inches=3)
 
-    fig_name = 'figures/sens_driven_summary_partII.pdf'
-    fig.savefig(fig_name, format="pdf", bbox_inches='tight')
+
+    fig_name = 'figures/sens_driven_summary_partII.png'
+    fig.savefig(fig_name, bbox_inches='tight')
+    plt.close()
