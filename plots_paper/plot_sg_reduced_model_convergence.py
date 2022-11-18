@@ -59,7 +59,7 @@ if __name__ == '__main__':
     "font.sans-serif": "Helvetica"})
 	# plt.rc("legend", edgecolor='none')  # No boxes around legends
 	plt.rcParams["figure.figsize"] = (6, 3)
-	plt.rcParams.update({'font.size': 6})
+	plt.rcParams.update({'font.size': 5})
 
 	bboard = "#323E48" # blackboard slate gray
 	chalk_white = "#DCDCDC"

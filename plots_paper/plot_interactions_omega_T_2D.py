@@ -156,26 +156,32 @@ if __name__ == '__main__':
 	
 	patches, texts, autotexts  = ax.pie(sobol_indices_of_interest, colors=colors, autopct='%1.1f%%', startangle=-40)
 
+	rc("text", usetex=True)         # Crisp axis ticks
+
 
 	text_sizes 	= []
 	y_pos 		= []
 	for i, t in enumerate(autotexts):
 
 		if sobol_indices_of_interest[i] < 0.05:
-			t.set_fontsize(20)
-			text_sizes.append(20)
+			t.set_fontsize(15)
+			text_sizes.append(15)
 			y_pos.append(1.0)
-			t.set_x(0.65)
-			t.set_y(-0.62)
+			t.set_x(0.63)
+			t.set_y(-0.64)
 
 		elif 0.05 <= sobol_indices_of_interest[i] <= 0.15:
 			t.set_fontsize(28)
 			text_sizes.append(28)
+			t.set_x(0.23)
+			t.set_y(-0.60)
 			y_pos.append(1.5)
 
 		elif 0.15 <= sobol_indices_of_interest[i] <= 0.21:
 			t.set_fontsize(40)
 			text_sizes.append(40)
+			t.set_x(0.52)
+			t.set_y(-0.20)
 			y_pos.append(1.2)
 
 		else:
@@ -203,9 +209,9 @@ if __name__ == '__main__':
 	    w.set_linewidth(2)
 	    w.set_edgecolor('black')
 
-	ax.set_title('interactions ' + params[target_dim], fontsize=50)
+	ax.text(-0.7, 1.3, 'interactions ' + params[target_dim], fontsize=50)
 
-# tight_layout()
+	# tight_layout()
 
 show()
 

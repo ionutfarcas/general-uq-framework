@@ -16,7 +16,7 @@ def which_variables(param, multiindex_bin_of_interest):
 		for i, m in enumerate(multiindex):
 			if m:
 				indices += params_x[i]
-				indices += ', '
+				indices += ','
 
 		indices = indices[:-1]
 
@@ -72,7 +72,6 @@ if __name__ == '__main__':
 	
 	rcParams['lines.linewidth'] = 0
 	rc("figure", dpi=400)           # High-quality figure ("dots-per-inch")
-	# rc("text", usetex=True)         # Crisp axis ticks
 	rc("font", family="serif")      # Crisp axis labels
 	rc("legend", edgecolor='none')  # No boxes around legends
 	rcParams["figure.figsize"] = (3, 3)
@@ -92,6 +91,8 @@ if __name__ == '__main__':
 	text_color2 = '#fee8c8'
 	text_color3 = '#fee8c8'
 	text_color4 = '#fdd49e'
+
+	charcoal    = [0.1, 0.1, 0.1]
 
 	text_colors = [text_color1, text_color4]
 	
@@ -155,6 +156,8 @@ if __name__ == '__main__':
 	patches, texts, autotexts  = ax.pie(sobol_indices_of_interest, colors=colors, autopct='%1.1f%%', startangle=-40)
 
 
+	rc("text", usetex=True)         # Crisp axis ticks
+
 	text_sizes 	= []
 	y_pos 		= []
 	for i, t in enumerate(autotexts):
@@ -201,11 +204,11 @@ if __name__ == '__main__':
 	    w.set_linewidth(2)
 	    w.set_edgecolor('black')
 
-	ax.set_title('interactions ' + params[target_dim], fontsize=50)
+	ax.text(-0.7, 1.3, 'interactions ' + params[target_dim], fontsize=50)
 
-# tight_layout()
+	# tight_layout()
 
-show()
+	show()
 
-fig_name = 'figures/interactions_wn_2D.pdf'
-fig.savefig(fig_name, format="pdf", bbox_inches='tight')
+	fig_name = 'figures/interactions_wn_2D.pdf'
+	fig.savefig(fig_name, format="pdf", bbox_inches='tight')

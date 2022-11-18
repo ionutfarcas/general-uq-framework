@@ -1,5 +1,8 @@
 import numpy as np
 from matplotlib.pyplot import *
+from matplotlib.ticker import AutoMinorLocator
+
+# style.use('ggplot')
 
 # q0
 left_tau 		= 1.44 - 0.2*1.44 
@@ -52,18 +55,18 @@ print(right_stoch_boundary)
 
 
 
-left_bounds 	= np.array([0.97*left_Tref, 0.98*left_nref, 0.96*left_omt, 0.97*left_omn, \
-								0.97*left_tau, 0.96*left_zeff, 0.955*left_q0, 0.97*left_shat])
+left_bounds 	= np.array([0.975*left_Tref, 0.985*left_nref, 0.94*left_omt, 0.955*left_omn, \
+								0.96*left_tau, 0.94*left_zeff, 0.94*left_q0, 0.95*left_shat])
 
-right_bounds 	= np.array([1.015*right_Tref, 1.01*right_nref, 1.02*right_omt, 1.01*right_omn, \
-								1.025*right_tau, 1.02*right_zeff, 1.03*right_q0, 1.02*right_shat])
+right_bounds 	= np.array([1.02*right_Tref, 1.015*right_nref, 1.03*right_omt, 1.02*right_omn, \
+								1.025*right_tau, 1.03*right_zeff, 1.03*right_q0, 1.02*right_shat])
 
 left_bounds_flipped 	= np.flip(left_bounds)
 right_bounds_flipped 	= np.flip(right_bounds)
 
 
 
-x_ticks = [[0.35, 0.44], [4.00, 4.95], [145, 225], [70, 105], [1.15, 1.75], [1.55, 2.4], [3.55, 5.5], [4, 6]]
+x_ticks = [[0.354, 0.44], [4.04, 4.945], [145, 226], [70, 106], [1.15, 1.73], [1.55, 2.43], [3.55, 5.5], [4, 6]]
 y_ticks = x_ticks[::-1]
 
 x_ticks_labels = [[0.35, 0.44], ['4.00', 4.95], [145, 225], [70, 105], [1.15, 1.75], [1.55, '2.40'], [3.55, '5.50'], [4, 6]]
@@ -97,12 +100,16 @@ if __name__ == '__main__':
     "font.sans-serif": "Helvetica"})
 	rc("legend", edgecolor='none')  # No boxes around legends
 	rcParams["figure.figsize"] = (8, 7)
-	rcParams.update({'font.size': 8})
+	rcParams.update({'font.size': 7})
 
 	bboard 			= "#323E48" # blackboard slate gray
 	chalk_white 	= "#DCDCDC"
 	chalk_orange 	= "#fc9d28"
 	transp 			= (1,1,1,0)
+
+	charcoal    = [0.1, 0.1, 0.1]
+	color1      = [0.6, 0.1, 0.1]
+	color2      = '#1251BF'
 
 	# white base settings
 	rc("figure",facecolor='w')
@@ -129,7 +136,12 @@ if __name__ == '__main__':
 			ax.minorticks_on()
 
 			ax.grid(which='major', linestyle='None', linewidth='0.5', color='k')
-			ax.grid(which='minor', linestyle='--', linewidth='0.4', color='k')
+			ax.grid(which='minor', linestyle='--', linewidth='0.7', color=color1, alpha=0.8)
+
+			ax.xaxis.set_minor_locator(AutoMinorLocator(4))
+			ax.yaxis.set_minor_locator(AutoMinorLocator(4))
+
+			
 
 			# ax.tick_params(which='both', # Options for both major and minor ticks
 			#                 top='off', # turn off top ticks
@@ -166,7 +178,7 @@ if __name__ == '__main__':
 			axs[i][j].set_xlim(left_bounds[j], right_bounds[j])
 			axs[i][j].set_ylim(left_bounds_flipped[i], right_bounds_flipped[i])
 
-			axs[i][j].plot(points_x, points_y, 'o', color='k', ms=2)
+			axs[i][j].plot(points_x, points_y, 'o', color='k', ms=2.5)
 
 	
 	tight_layout()

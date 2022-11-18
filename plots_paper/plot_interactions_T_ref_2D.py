@@ -152,6 +152,8 @@ if __name__ == '__main__':
 	
 	patches, texts, autotexts  = ax.pie(sobol_indices_of_interest, colors=colors, autopct='%1.1f%%', startangle=-40)
 
+	rc("text", usetex=True)         # Crisp axis ticks
+
 
 	text_sizes 	= []
 	y_pos 		= []
@@ -199,11 +201,11 @@ if __name__ == '__main__':
 	    w.set_linewidth(2)
 	    w.set_edgecolor('black')
 
-	ax.set_title('interactions ' + params[target_dim], fontsize=50)
+	ax.text(-0.7, 1.3, 'interactions ' + params[target_dim], fontsize=50)
 
-# tight_layout()
+	# tight_layout()
 
-show()
+	show()
 
-fig_name = 'figures/interactions_T_ref_2D.pdf'
-fig.savefig(fig_name, format="pdf", bbox_inches='tight')
+	fig_name = 'figures/interactions_T_ref_2D.pdf'
+	fig.savefig(fig_name, format="pdf", bbox_inches='tight')
